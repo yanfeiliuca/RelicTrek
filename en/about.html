@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About RelicTrek — What Makes a Relic Worth Hunting | RelicTrek</title>
+<meta name="description" content="RelicTrek is a vertical game guide site for rare crafted relics — items the game never tells you exist. Learn about our 5-standard system and why we only cover assembled, scattered, gated items.">
+<link rel="canonical" href="https://relictrek.com/en/about.html">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/about.html">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/about.html">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/about.html">
+<meta property="og:title" content="About RelicTrek">
+<meta property="og:description" content="We only cover relics that are high-value, multi-part assembled, scattered, gated, and never naturally dropped.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:#bd7c08}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{display:flex;gap:.25rem;font-family:var(--font-ui);font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:3rem 2rem 4rem}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:2rem}.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+main h1{font-family:var(--font-heading);font-size:2rem;color:var(--gold);margin-bottom:1.5rem;letter-spacing:.03em}
+main h2{font-family:var(--font-heading);font-size:1.15rem;color:var(--text);margin:2.25rem 0 .75rem;letter-spacing:.02em}
+main p,main li{font-size:.88rem;color:var(--text-dim);margin-bottom:.65rem;line-height:1.7}
+
+.standards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin:1.25rem 0}
+.std-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;transition:border-color .2s}
+.std-card:hover{border-color:var(--border-gold)}
+.std-card .std-num{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--gold);margin-bottom:.35rem}
+.std-card .std-title{font-weight:600;color:var(--text);font-size:.9rem;margin-bottom:.3rem}
+.std-card .std-desc{font-size:.78rem;color:var(--text-dim);line-height:1.5}
+
+.diff-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.diff-table th{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border)}
+.diff-table td{padding:.6rem .75rem;border-bottom:1px solid var(--border);color:var(--text-dim)}
+.diff-table td:first-child{color:var(--text);font-weight:500}
+.diff-table td.our{color:var(--gold)}
+
+footer{background:var(--bg-deep);border-top:1px solid var(--border);padding:2rem;text-align:center;position:relative;z-index:1}
+footer p{font-size:.75rem;color:var(--muted)}
+
+@media(max-width:768px){nav .nav-links{display:none}nav{padding:0 1rem}main{padding:2rem 1rem 3rem}.standards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/en/" class="logo"><span>🧭</span>RelicTrek</a>
+  <ul class="nav-links"><li><a href="/en/games/">Games</a></li><li><a href="/en/games/windrose/guides/">Guides</a></li><li><a href="/en/blog/">Blog</a></li><li><a href="/en/about.html" class="active">About</a></li></ul>
+  <div class="nav-right"><div class="lang-switch"><a href="/en/about.html" class="active">EN</a><a href="/zh/about.html">中文</a></div></div>
+</nav>
+
+<main>
+  <div class="breadcrumb"><a href="/en/">Home</a> &rsaquo; <span>About</span></div>
+  <h1>What Is RelicTrek?</h1>
+
+  <p>RelicTrek is a <strong>vertical game guide site</strong> with a single obsession: rare crafted items that most players never find — because the game never tells them these items exist.</p>
+  <p>We don't cover every weapon. We don't write walkthroughs. We don't explain basic mechanics. We do one thing: <strong>find the hidden relics that change everything, and give you the fastest route to assemble every piece.</strong></p>
+
+  <h2>The 5-Standard System</h2>
+  <p>An item only appears on RelicTrek if it meets <strong>all five</strong> of these criteria. No exceptions.</p>
+
+  <div class="standards">
+    <div class="std-card"><div class="std-num">01</div><div class="std-title">Any Item Type</div><div class="std-desc">Weapon, armor, accessory, tool, consumable — if it's valuable, we cover it. We don't care about the category. We care about the impact.</div></div>
+    <div class="std-card"><div class="std-num">02</div><div class="std-title">High Value Impact</div><div class="std-desc">Obtaining this item must fundamentally change a core capability: damage output, survivability, mobility, map access, or crafting potential.</div></div>
+    <div class="std-card"><div class="std-num">03</div><div class="std-title">Multi-Part Assembly</div><div class="std-desc">The item cannot be obtained as a natural drop or vendor purchase. It must be assembled from 2+ independent components found in the world.</div></div>
+    <div class="std-card"><div class="std-num">04</div><div class="std-title">Geographically Scattered</div><div class="std-desc">Components must be spread across 2+ distinct biomes or regions. If everything is in one room, there's no route to plan — and no reason for RelicTrek.</div></div>
+    <div class="std-card"><div class="std-num">05</div><div class="std-title">Gated Access</div><div class="std-desc">At least one component must have a real obstacle: a boss fight, a maze, a dark zone, a psychological trial. Something that makes uninformed players give up.</div></div>
+  </div>
+
+  <h2>What We Do vs. What Traditional Guide Sites Do</h2>
+  <table class="diff-table">
+    <tr><th></th><th>Traditional Sites</th><th>RelicTrek</th></tr>
+    <tr><td>Coverage</td><td>Everything — walkthroughs, quests, every item</td><td class="our">Only 5-standard relics</td></tr>
+    <tr><td>Content depth</td><td>Shallow listing ("drops from X, 100 ATK")</td><td class="our">6-module deep guide per item</td></tr>
+    <tr><td>User assumption</td><td>Player knows nothing, needs tutorial</td><td class="our">Player has played, needs the best upgrade path</td></tr>
+    <tr><td>Route planning</td><td>Not provided</td><td class="our">Optimal route with Plan A/B, danger zones, bonus loot</td></tr>
+    <tr><td>Voice</td><td>Impersonal database</td><td class="our">Treasure map. "You don't know this exists. Here's why you need it."</td></tr>
+  </table>
+
+  <h2>Our Design Philosophy</h2>
+  <p>We benchmark our architecture against <strong>Maxroll.gg</strong> (multi-game platform structure, clean navigation hierarchy) and our content depth against <strong>Vulkk.com</strong> (single-game vertical depth, structured guide format). Then we improve on both: warmer gold-toned aesthetics, faster pure-static performance, and a sharper focus — we cover only what they won't.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, corrections, or game suggestions? <a href="/en/contact.html">Get in touch →</a></p>
+</main>
+
+<footer><p>© 2026 RelicTrek. This is a fan site and is not affiliated with any game developer or publisher.</p></footer>
+</body>
+</html>
