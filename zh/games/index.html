@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏库 — 探索多个游戏世界的隐藏遗物 | RelicTrek 圣物寻踪</title>
+<meta name="description" content="跨游戏稀有合成遗物攻略。每款游戏通过五大标准筛选：高附加值、多部件合成、部件分散、有获取门槛、非原生掉落。">
+<meta name="keywords" content="游戏遗物攻略, 稀有合成物品, 隐藏游戏物品, 寻宝指南, Windrose 遗物, RelicTrek 游戏">
+<link rel="canonical" href="https://relictrek.com/zh/games/">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/games/">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/games/">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/games/">
+<meta property="og:title" content="游戏库 — RelicTrek 圣物寻踪">
+<meta property="og:description" content="浏览游戏。发现你不知道存在的遗物。">
+<meta property="og:type" content="website"><meta property="og:url" content="https://relictrek.com/zh/games/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel','Noto Sans SC',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter','Noto Sans SC',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.8;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{text-decoration:none;transition:all .25s ease}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(7,8,10,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold-lt);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.04em}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold-lt)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{display:flex;gap:.25rem;font-family:var(--font-ui);font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold-lt);background:var(--gold-glow)}
+
+.wrapper{max-width:1100px;margin:0 auto;padding:3rem 2rem 4rem;position:relative;z-index:1}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:2.5rem}
+.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold-lt)}
+
+.hero{margin-bottom:3.5rem}
+.hero .eyebrow{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+.hero .eyebrow::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--gold),transparent);max-width:120px}
+.hero h1{font-family:var(--font-heading);font-size:2.4rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:1rem;letter-spacing:.03em}
+.hero h1 span{color:var(--gold)}
+.hero .subtitle{font-size:.95rem;color:var(--text-dim);max-width:560px;line-height:1.8}
+
+.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:1.5rem}
+@media(max-width:560px){.game-grid{grid-template-columns:1fr}}
+
+.game-card{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--bg-card);transition:border-color .3s,box-shadow .3s,transform .2s;text-decoration:none;color:inherit;display:block}
+.game-card:hover{border-color:var(--border-gold);box-shadow:0 0 40px var(--gold-glow);transform:translateY(-3px)}
+.game-card.active{border-color:var(--border-gold);box-shadow:0 0 32px var(--gold-glow)}
+.game-card.coming-soon{opacity:.55;pointer-events:none;filter:grayscale(.3)}
+
+.game-card-header{display:flex;align-items:center;gap:1.25rem;padding:1.75rem 2rem 1.25rem}
+.game-card-header .gc-icon{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.gc-icon.live{background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.2)}
+.gc-icon.soon{background:rgba(74,85,104,.1);border:1px solid rgba(74,85,104,.2)}
+.gc-info{flex:1;min-width:0}
+.gc-info .gc-name{font-family:var(--font-heading);font-size:1.4rem;font-weight:600;color:var(--text);margin-bottom:.15rem;letter-spacing:.02em}
+.gc-info .gc-dev{font-family:var(--font-ui);font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+.gc-badge{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;font-weight:600;flex-shrink:0}
+.gc-badge.live{background:rgba(46,184,160,.12);color:var(--teal);border:1px solid rgba(46,184,160,.2)}
+.gc-badge.soon{background:rgba(74,85,104,.12);color:var(--muted);border:1px solid rgba(74,85,104,.2)}
+
+.game-card-body{padding:0 2rem 1.75rem}
+.game-card-body .gc-desc{font-size:.88rem;color:var(--text-dim);line-height:1.8;margin-bottom:1.25rem}
+
+.gc-stats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.gc-stat{font-family:var(--font-ui);font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.35rem;letter-spacing:.03em}
+.gc-stat strong{color:var(--text);font-weight:600}
+
+.gc-relics-label{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.gc-relic-tags{display:flex;gap:.45rem;flex-wrap:wrap}
+.gc-relic-tag{font-family:var(--font-ui);font-size:.75rem;font-weight:500;color:var(--gold-lt);background:rgba(200,146,42,.08);border:1px solid rgba(200,146,42,.15);padding:.4rem .85rem;border-radius:6px;letter-spacing:.03em}
+
+footer{background:var(--bg-deep);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:4rem;position:relative;z-index:1}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--font-heading);font-size:.75rem;font-weight:600;color:var(--gold-lt);margin-bottom:.85rem;letter-spacing:.08em}
+footer ul{list-style:none}footer li{margin-bottom:.45rem}
+footer a,footer p{font-size:.82rem;color:var(--muted)}footer a:hover{color:var(--gold-lt)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);text-align:center}
+
+@media(max-width:768px){.game-grid{grid-template-columns:1fr}nav .nav-links{display:none}nav{padding:0 1rem}.wrapper{padding:2rem 1rem 3rem}.hero h1{font-size:1.6rem}.game-card-header{padding:1.25rem 1.25rem .75rem}.game-card-body{padding:0 1.25rem 1.25rem}.footer-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/zh/" class="logo"><span>🧭</span>RelicTrek 圣物寻踪</a>
+  <ul class="nav-links"><li><a href="/zh/games/" class="active">游戏</a></li><li><a href="/zh/games/windrose/guides/">攻略</a></li><li><a href="/zh/blog/">博客</a></li><li><a href="/zh/about.html">关于</a></li></ul>
+  <div class="nav-right"><div class="lang-switch"><a href="/en/games/">EN</a><a href="/zh/games/" class="active">中文</a></div></div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="breadcrumb"><a href="/zh/">首页</a> &rsaquo; <span>游戏</span></div>
+
+  <div class="hero">
+    <div class="eyebrow">游戏港口</div>
+    <h1>选择你的<span>世界</span></h1>
+    <p class="subtitle">以下每款游戏都经过五大标准验证。我们只收录<strong>高附加值、多部件合成、部件分散、有获取门槛、非原生掉落</strong>的遗物。不符合这些标准的游戏，不配出现在这里。</p>
+  </div>
+
+  <div class="game-grid">
+
+    <a href="windrose/" class="game-card active">
+      <div class="game-card-header">
+        <div class="gc-icon live">🌴</div>
+        <div class="gc-info"><div class="gc-name">Windrose</div><div class="gc-dev">Kraken Express · 生存制作</div></div>
+        <span class="gc-badge live">已上线</span>
+      </div>
+      <div class="game-card-body">
+        <div class="gc-desc">一个拥有 3 个生物群系和 4 级合成树的广阔生存制作世界。游戏把最好的物品藏在散布各处的多步组装链后面——主线任务从不告诉你它们的存在。</div>
+        <div class="gc-stats"><span class="gc-stat">🗺️ <strong>3</strong> 个群系</span><span class="gc-stat">⚙️ <strong>4级</strong> 合成</span><span class="gc-stat">🏆 <strong>5</strong> 件遗物已绘制</span><span class="gc-stat">📅 <strong>2026年4月</strong> 发售</span></div>
+        <div class="gc-relics-label">已收录遗物</div>
+        <div class="gc-relic-tags"><span class="gc-relic-tag">美洲豹之戒</span><span class="gc-relic-tag">火药</span><span class="gc-relic-tag">尖刺鳞甲</span><span class="gc-relic-tag">千刃细剑</span><span class="gc-relic-tag">快速旅行铃铛</span></div>
+      </div>
+    </a>
+
+    <div class="game-card coming-soon">
+      <div class="game-card-header">
+        <div class="gc-icon soon">🐉</div>
+        <div class="gc-info"><div class="gc-name">Monster Hunter Wilds</div><div class="gc-dev">Capcom · 动作 RPG</div></div>
+        <span class="gc-badge soon">即将推出</span>
+      </div>
+      <div class="game-card-body">
+        <div class="gc-desc">14 种武器类型、数百套防具、以及天然适合我们寻宝模式的材料刷取系统。Artian 武器和稀有材料刷取路线将是重点方向。</div>
+        <div class="gc-stats"><span class="gc-stat">🗺️ <strong>5</strong> 个区域</span><span class="gc-stat">⚙️ <strong>深度</strong> 合成</span><span class="gc-stat">📅 <strong>2025年2月</strong> 发售</span></div>
+      </div>
+    </div>
+
+    <div class="game-card coming-soon">
+      <div class="game-card-header">
+        <div class="gc-icon soon">⚔️</div>
+        <div class="gc-info"><div class="gc-name">Elden Ring: Nightreign</div><div class="gc-dev">FromSoftware · 动作 RPG</div></div>
+        <span class="gc-badge soon">即将推出</span>
+      </div>
+      <div class="game-card-body">
+        <div class="gc-desc">FromSoftware 的新篇章。遗物系统和跨广阔开放世界的多点装备收集，天然适合我们的垂直攻略模式。</div>
+        <div class="gc-stats"><span class="gc-stat">🗺️ <strong>开放</strong> 世界</span><span class="gc-stat">⚙️ <strong>遗物</strong> 系统</span><span class="gc-stat">📅 <strong>2025年</strong> 发售</span></div>
+      </div>
+    </div>
+
+    <div class="game-card coming-soon">
+      <div class="game-card-header">
+        <div class="gc-icon soon">🌊</div>
+        <div class="gc-info"><div class="gc-name">Subnautica 2</div><div class="gc-dev">Unknown Worlds · 生存探索</div></div>
+        <span class="gc-badge soon">即将推出</span>
+      </div>
+      <div class="game-card-body">
+        <div class="gc-desc">30 多种原材料、多层加工链、散布在外星海洋各处的蓝图碎片。利维坦级生物把守着最好的组件。</div>
+        <div class="gc-stats"><span class="gc-stat">🗺️ <strong>多个</strong> 群系</span><span class="gc-stat">⚙️ <strong>3层</strong> 加工</span><span class="gc-stat">📅 <strong>2026年5月</strong> EA 发售</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><h4>RelicTrek 圣物寻踪</h4><p style="color:var(--text-dim)">每一件遗物都有迹可循。我们绘制寻宝之路。</p></div>
+    <div><h4>游戏</h4><ul><li><a href="/zh/games/windrose/">Windrose</a></li><li><a href="#">更多即将推出</a></li></ul></div>
+    <div><h4>关于</h4><ul><li><a href="/zh/about.html">关于我们</a></li><li><a href="/zh/contact.html">联系方式</a></li><li><a href="/zh/blog/">博客</a></li></ul></div>
+    <div><h4>法律</h4><ul><li><a href="/zh/privacy.html">隐私政策</a></li><li><a href="/zh/terms.html">服务条款</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 RelicTrek。保留所有权利。本站为粉丝站点，与任何游戏开发商或发行商无关。</p></div>
+</footer>
+
+</body>
+</html>
