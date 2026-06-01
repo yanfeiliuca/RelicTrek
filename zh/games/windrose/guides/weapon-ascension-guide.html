@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>武器晋升系统——大多数玩家从未解锁的隐藏升级体系 | RelicTrek 圣物寻踪</title>
+<meta name="description" content="Windrose 有两套完全独立的升级系统，游戏几乎不解释任何一个。完整攻略：升级站（1-8级）和武器晋升（使用 Tumbaga Ingots 从稀有升至史诗），包括隐藏的锻冶站升级链条。">
+<meta name="keywords" content="Windrose 武器晋升, Windrose Tumbaga Ingot 攻略, Windrose 稀有升史诗, Windrose 锻冶站升级, Windrose 隐藏升级系统, Windrose 风箱铁砧">
+<link rel="canonical" href="https://relictrek.com/zh/games/windrose/guides/weapon-ascension-guide.html">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/games/windrose/guides/weapon-ascension-guide.html">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/games/windrose/guides/weapon-ascension-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/games/windrose/guides/weapon-ascension-guide.html">
+<meta property="og:title" content="武器晋升系统攻略 — RelicTrek 圣物寻踪">
+<meta property="og:description" content="稀有到史诗。Tumbaga Ingots。隐藏被动。大多数玩家从未发现的升级系统。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/zh/games/windrose/guides/weapon-ascension-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel','Noto Sans SC',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter','Noto Sans SC',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.8;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(8,11,15,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-gold);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.03em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:1.75rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.02em;transition:color .2s}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{display:flex;gap:.25rem;font-size:.8rem;font-weight:500;font-family:var(--font-ui)}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+.page-header{max-width:1100px;margin:0 auto;padding:2.5rem 2rem 0;position:relative;z-index:1}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.25rem}.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-header{margin-bottom:2rem}.tags{display:flex;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap}
+.tag{padding:.25rem .7rem;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border-radius:3px}
+.tag-accessory{background:rgba(245,185,69,.12);color:var(--gold);border:1px solid rgba(245,185,69,.2)}
+.tag-rare{background:rgba(92,141,202,.12);color:#5c8dca;border:1px solid rgba(92,141,202,.2)}
+.tag-midgame{background:rgba(42,157,143,.12);color:var(--teal);border:1px solid rgba(42,157,143,.2)}
+.tag-crit{background:rgba(232,93,4,.1);color:var(--red);border:1px solid rgba(232,93,4,.2)}
+.article-header h1{font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--gold);line-height:1.4;margin-bottom:.75rem;text-shadow:0 0 20px rgba(245,185,69,.25)}
+.article-meta{display:flex;gap:1.5rem;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.quick-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;text-align:center;transition:border-color .2s,box-shadow .2s}
+.stat-card:hover{border-color:var(--border-gold);box-shadow:0 0 20px var(--gold-glow)}
+.stat-card .stat-value{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.2}
+.stat-card .stat-label{font-size:.72rem;color:var(--muted);margin-top:.35rem;text-transform:uppercase;letter-spacing:.04em}
+.main-layout{max-width:1100px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:1fr 300px;gap:2.5rem;position:relative;z-index:1}
+.main-content{min-width:0}.sidebar{position:sticky;top:84px;align-self:start}
+section{margin-bottom:2.5rem}
+section h2{font-family:var(--font-heading);font-size:1.35rem;font-weight:600;color:var(--gold);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+section h3{font-size:1.05rem;font-weight:600;color:var(--text);margin:1.25rem 0 .6rem}
+section p{margin-bottom:.85rem;color:var(--text-dim);font-size:.92rem}
+section ul,section ol{margin:.6rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.92rem}section li{margin-bottom:.4rem}
+.material-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s}
+.material-card:hover{border-color:var(--border-gold)}.material-card .mat-name{font-weight:600;font-size:1rem;color:var(--text);margin-bottom:.35rem}
+.material-card .mat-meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;margin-top:.6rem}
+.mat-meta-item{display:flex;align-items:center;gap:.35rem}.mat-meta-item.danger{color:var(--red)}.mat-meta-item.bonus{color:var(--teal)}.mat-meta-item.info{color:#5c8dca}
+.danger-box,.bonus-box{padding:1rem 1.25rem;border-radius:8px;margin-bottom:.85rem;font-size:.9rem}
+.danger-box{background:rgba(232,93,4,.08);border-left:3px solid var(--red)}.danger-box .box-label{font-weight:600;color:var(--red);margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.bonus-box{background:rgba(42,157,143,.08);border-left:3px solid var(--teal)}.bonus-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.route-timeline{position:relative;padding-left:2rem;margin:1rem 0}
+.route-timeline::before{content:'';position:absolute;left:.5rem;top:.5rem;bottom:.5rem;width:1px;background:var(--border-gold)}
+.route-step{position:relative;margin-bottom:1.1rem;font-size:.9rem;color:var(--text-dim)}
+.route-step::before{content:'';position:absolute;left:-1.63rem;top:.35rem;width:10px;height:10px;border-radius:50%;background:var(--bg-card);border:2px solid var(--gold)}
+.route-step .step-num{font-weight:600;color:var(--gold);margin-right:.4rem}
+.sidebar-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-family:var(--font-heading);font-size:.85rem;font-weight:600;color:var(--gold);margin-bottom:1rem;letter-spacing:.03em}
+.sidebar-card ul{list-style:none;font-size:.85rem}.sidebar-card li{margin-bottom:.55rem}.sidebar-card a{color:var(--text-dim);font-size:.85rem}.sidebar-card a:hover{color:var(--gold)}
+.ad-placeholder{background:var(--bg-elevated);border:1px dashed var(--border);border-radius:8px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+footer{background:var(--bg-deep);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:3rem;position:relative;z-index:1}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--font-heading);font-size:.8rem;font-weight:600;color:var(--gold);margin-bottom:.85rem;letter-spacing:.06em}
+footer ul{list-style:none}footer li{margin-bottom:.45rem}footer a,footer p{font-size:.82rem;color:var(--muted)}footer a:hover{color:var(--gold)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);text-align:center}
+@media(max-width:900px){.main-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.quick-stats{grid-template-columns:repeat(2,1fr)}nav .nav-links{display:none}.article-header h1{font-size:1.5rem}}
+@media(max-width:600px){.quick-stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}nav{padding:0 1rem}.main-layout{padding:0 1rem 2rem}.page-header{padding:2rem 1rem 0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/zh/" class="logo"><span>🧭</span>RelicTrek 圣物寻踪</a>
+  <ul class="nav-links"><li><a href="/zh/games/">游戏</a></li><li><a href="/zh/games/windrose/" class="active">攻略</a></li><li><a href="/zh/blog/">博客</a></li><li><a href="/zh/about.html">关于</a></li></ul>
+  <div class="nav-right"><div class="lang-switch"><a href="/en/games/windrose/guides/weapon-ascension-guide.html">EN</a><a href="/zh/games/windrose/guides/weapon-ascension-guide.html" class="active">中文</a></div></div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/games/">游戏</a> &rsaquo; <a href="/zh/games/windrose/">Windrose</a> &rsaquo; <span>武器晋升系统</span></div>
+  <div class="article-header">
+    <div class="tags"><span class="tag tag-accessory">合成</span><span class="tag tag-accessory">晋升</span><span class="tag tag-accessory">Tumbaga Ingot</span><span class="tag tag-rare">锻冶站</span><span class="tag tag-crit">史诗</span><span class="tag tag-rare">隐藏系统</span></div>
+    <h1>武器晋升系统——大多数玩家从未解锁的隐藏升级体系</h1>
+    <div class="article-meta"><span>🕐 路线约2–3小时准备</span><span>🗺️ 全区域</span><span>⚔️ 难度: 3/5</span><span>📅 更新: 2026-05-31</span></div>
+  </div>
+  <div class="quick-stats">
+    <div class="stat-card"><div class="stat-value">2–3小时</div><div class="stat-label">准备时间</div></div>
+    <div class="stat-card"><div class="stat-value">全部</div><div class="stat-label">覆盖区域</div></div>
+    <div class="stat-card"><div class="stat-value">3/5</div><div class="stat-label">难度</div></div>
+    <div class="stat-card"><div class="stat-value">中期</div><div class="stat-label">前置条件</div></div>
+  </div>
+</div>
+
+<div class="main-layout"><div class="main-content">
+
+  <section id="why">
+    <h2>一、为什么你需要它</h2>
+    <p>Windrose 里有两套完全独立的升级系统——游戏几乎不解释任何一个。</p>
+    <p>第一个是<strong>升级站（Upgrading Station）</strong>：一个独立于所有合成站的可建造建筑，处理武器、铠甲和背包的等级升级（1–8级）。</p>
+    <p>第二个是<strong>武器晋升（Weapon Ascension）</strong>：武器锻冶工作站内部的系统，使用 Tumbaga Ingots 将稀有武器转换为史诗武器，解锁基础武器没有的新被动技能。史诗武器的战斗行为与其稀有版本有根本性的不同。</p>
+    <p>大多数玩家最终能搞清楚升级站，几乎没有人在没有攻略的情况下发现武器晋升——因为它需要先升级锻冶站本身（需要铁砧和风箱），而风箱需要沼铁锭，沼铁锭需要一整套沼泽刷取流程。整条路径完全不可见，除非你知道要去找它。</p>
+  </section>
+
+  <section id="systems">
+    <h2>二、两套系统说明</h2>
+    <h3>系统1 — 升级站（等级升级）</h3>
+    <div class="material-card">
+      <div class="mat-name">功能</div>
+      <p style="font-size:.85rem;color:var(--muted)">提升武器/铠甲伤害、防御值、战力等级。</p>
+      <div class="mat-meta">
+        <span class="mat-meta-item info">🔧 合成菜单独立建造</span>
+        <span class="mat-meta-item">⛏️ 标准矿石材料（铁矿、铜矿等）</span>
+        <span class="mat-meta-item">📊 最高8级</span>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:-.5rem;margin-bottom:1.5rem">注意：与武器锻冶工作站完全不同，两者是独立建筑。</p>
+
+    <h3>系统2 — 武器晋升（稀有→史诗）</h3>
+    <div class="material-card" style="border-color:var(--border-gold)">
+      <div class="mat-name" style="color:var(--gold)">功能</div>
+      <p style="font-size:.85rem;color:var(--muted)">将稀有武器转换为史诗，解锁隐藏被动技能。</p>
+      <div class="mat-meta">
+        <span class="mat-meta-item">🏭 武器锻冶工作站（晋升标签——锻冶站升级后才可见）</span>
+        <span class="mat-meta-item">💎 Tumbaga Ingots（数量因武器而异）</span>
+        <span class="mat-meta-item danger">⚠️ 每件武器只能晋升一次</span>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:-.5rem;margin-bottom:1.5rem">警告：Tumbaga Ingots 分解时不会退还。提交前仔细确认。</p>
+  </section>
+
+  <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #1</div>
+
+  <section id="route">
+    <h2>三、最优路线</h2>
+
+    <h3>第1步 — 建造升级站</h3>
+    <p>在合成/建筑菜单中找到升级站，作为独立建筑放置。建成后，通过选择物品并提供所需材料来升级任何武器或铠甲。这个系统很直观。</p>
+
+    <h3>第2步 — 解锁武器晋升（难点所在）</h3>
+    <p>要在武器锻冶工作站看到晋升标签，必须先<strong>升级锻冶站本身</strong>。需要两个组件：</p>
+    <ul>
+      <li><strong>铁砧</strong> — 在标准合成站制作</li>
+      <li><strong>风箱</strong> — 较难的部分。风箱需要<strong>沼铁锭</strong>作为关键组件</li>
+    </ul>
+    <p><strong>沼铁锭</strong> = 古代碎片×2 + 泥沼粉末×1，在大型冶炼炉中冶炼。两种材料都来自诅咒沼泽。</p>
+
+    <h3>第3步 — 刷取 Tumbaga Ingots</h3>
+    <p>没有 Tumbaga Ingots，晋升标签存在但什么都做不了。主要来源：</p>
+    <ul>
+      <li><strong>古代宝箱</strong>：诅咒沼泽废墟内（每处3–4个，一次性）</li>
+      <li><strong>星象塔任务链：</strong>共计19个（单次最高效来源——见星象塔攻略）</li>
+      <li><strong>全区域兴趣点</strong>清理奖励</li>
+    </ul>
+
+    <h3>第4步 — 明智选择晋升对象</h3>
+    <p>等到找到你会长期使用的武器再花费 Tumbaga Ingots。把即将替换掉的武器晋升是浪费游戏最稀有资源。优先选择：</p>
+    <ul>
+      <li><strong>瘟疫战戟</strong>（解锁特殊攻击恢复35%血量）</li>
+      <li><strong>毁灭细剑</strong>（解锁引爆印记时恢复40%血量）</li>
+      <li>任何你想要激活特定被动的武器</li>
+    </ul>
+
+    <h3>第5步 — 晋升</h3>
+    <p>在武器锻冶工作站，选择晋升标签，选择你的武器，支付 Tumbaga Ingots。武器变为史诗级，隐藏被动激活。</p>
+
+    <div class="bonus-box">
+      <div class="box-label">💎 顺路宝物</div>
+      <p style="margin:0;font-size:.85rem;color:var(--text-dim)">在废墟中刷取 Tumbaga Ingots 时，使用<strong>绳索</strong>（可在工作台合成）下探进入废墟内部。许多古代宝箱只能通过绳索下降才能到达——跳过这一步的玩家会错过大量锭。</p>
+    </div>
+  </section>
+
+  <section id="dangers">
+    <h2>四、避坑</h2>
+    <div class="danger-box"><div class="box-label">⚠️ 危险一 — 升级站不是武器锻冶工作站</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">它们是不同建筑，有不同功能。玩家经常混淆，在锻冶工作站内找"升级"选项，找不到就放弃。<strong>两者都要建造，分别使用。</strong></p></div>
+    <div class="danger-box"><div class="box-label">🔴 危险二 — 晋升不可逆且不退款</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">花费在晋升上的 Tumbaga Ingots 就永远消失了。分解台退还基础合成材料，但不退还晋升资源。提交前仔细确认。</p></div>
+    <div class="danger-box"><div class="box-label">⚠️ 危险三 — 普通武器无法晋升</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">只有稀有及更高品质的武器才有晋升路径。如果晋升标签显示武器不可选，很可能是普通品质。在判断是否出问题之前先检查武器稀有度。</p></div>
+  </section>
+
+  <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #2</div>
+
+  <section><h2>相关攻略</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
+    <a href="enchanting-table.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1rem"><div style="font-weight:600;color:var(--text);margin-bottom:.3rem">✨ 附魔台</div><div style="font-size:.78rem;color:var(--muted)">解锁终盘体系</div></a>
+    <a href="stargazer-tower-fate-of-prophets.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1rem"><div style="font-weight:600;color:var(--text);margin-bottom:.3rem">🌟 星象塔</div><div style="font-size:.78rem;color:var(--muted)">19个 Tumbaga Ingots</div></a>
+    <a href="plague-halberd-rapier-devastation.html" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1rem"><div style="font-weight:600;color:var(--text);margin-bottom:.3rem">⚔️ 瘟疫战戟与毁灭细剑</div><div style="font-size:.78rem;color:var(--muted)">S级终盘武器</div></a>
+  </div></section>
+
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-card"><h4>本页导航</h4><ul><li><a href="#why">一、为什么你需要它</a></li><li><a href="#systems">二、两套系统说明</a></li><li><a href="#route">三、最优路线</a></li><li><a href="#dangers">四、避坑</a></li></ul></div>
+  <div class="sidebar-card"><h4>快捷导航</h4><ul><li><a href="/zh/games/windrose/">← Windrose 世界首页</a></li><li><a href="/zh/games/windrose/">← 全部 Windrose 攻略</a></li><li><a href="/zh/">← RelicTrek 首页</a></li></ul></div>
+  <div class="ad-placeholder">Google AdSense<br>300×250</div>
+</aside>
+</div>
+
+<footer><div class="footer-grid">
+  <div><h4>RelicTrek 圣物寻踪</h4><p style="color:var(--text-dim)">每一件遗物都有迹可循。我们绘制寻宝之路。</p></div>
+  <div><h4>游戏</h4><ul><li><a href="/zh/games/windrose/">Windrose</a></li><li><a href="#">更多即将推出</a></li></ul></div>
+  <div><h4>关于</h4><ul><li><a href="/zh/about.html">关于我们</a></li><li><a href="/zh/contact.html">联系方式</a></li><li><a href="/zh/blog/">博客</a></li></ul></div>
+  <div><h4>法律</h4><ul><li><a href="/zh/privacy.html">隐私政策</a></li><li><a href="/zh/terms.html">服务条款</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 RelicTrek。保留所有权利。本站为粉丝站点，与 Kraken Express 或任何游戏开发商/发行商无关。所有游戏资产和商标均为其各自所有者财产。</p></div></footer>
+</body>
+</html>
