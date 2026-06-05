@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windrose 武器晋阶：那个改变一切的隐藏系统 — RelicTrek</title>
+<meta name="description" content="大多数玩家从来没发现Windrose里的晋阶选项卡。本文拆解双升级系统的逻辑、图巴铸锭的获取路线，以及哪些武器值得你压上全部资源。">
+<link rel="canonical" href="https://relictrek.com/zh/blog/2026-06-05-windrose-weapon-ascension-guide.html">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/blog/2026-06-05-windrose-weapon-ascension-guide.html">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/blog/2026-06-05-windrose-weapon-ascension-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/blog/2026-06-05-windrose-weapon-ascension-guide.html">
+<meta property="og:title" content="Windrose 武器晋阶：那个改变一切的隐藏系统 — RelicTrek">
+<meta property="og:description" content="大多数玩家从来没发现Windrose里的晋阶选项卡。本文拆解双升级系统的逻辑、图巴铸锭的获取路线，以及哪些武器值得你压上全部资源。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/zh/blog/2026-06-05-windrose-weapon-ascension-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:75px;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-meta{font-family:var(--font-ui);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+h1{font-family:var(--font-heading);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:1.5rem;text-shadow:0 0 20px rgba(245,185,69,.2)}
+h2{font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gold);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+h3{font-size:1rem;font-weight:600;color:var(--text);margin:1.25rem 0 .5rem}
+p{margin-bottom:.9rem;color:var(--text-dim);font-size:.93rem;line-height:1.75}
+ul,ol{margin:.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.93rem}
+li{margin-bottom:.35rem}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.note-box p{margin:0;color:var(--text-dim)}
+.tip-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(42,157,143,.07);border-left:3px solid var(--teal)}
+.tip-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.tip-box p{margin:0;color:var(--text-dim)}
+.guide-link{display:inline-block;margin-top:.5rem;padding:.4rem .9rem;border:1px solid var(--border-gold);border-radius:4px;font-family:var(--font-ui);font-size:.8rem;font-weight:500;color:var(--gold);letter-spacing:.04em;transition:background .2s}
+.guide-link:hover{background:var(--gold-glow)}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:2.5rem 2rem 1.5rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--font-heading);font-size:1rem;color:var(--gold)}
+.footer-links{display:flex;gap:1.5rem;font-size:.8rem}
+.footer-links a{color:var(--muted)}.footer-links a:hover{color:var(--gold)}
+.footer-copy{width:100%;text-align:center;font-size:.75rem;color:var(--muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/zh/" class="logo"><span>🗺</span>RelicTrek</a>
+  <ul class="nav-links">
+    <li><a href="/zh/">首页</a></li>
+    <li><a href="/zh/games/">游戏</a></li>
+    <li><a href="/zh/blog/" class="active">博客</a></li>
+    <li><a href="/zh/about.html">关于</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="/en/blog/2026-06-05-windrose-weapon-ascension-guide.html">EN</a>
+      <a href="/zh/blog/2026-06-05-windrose-weapon-ascension-guide.html" class="active">中文</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="breadcrumb">
+    <a href="/zh/">首页</a> › <a href="/zh/blog/">博客</a> › <span>Windrose 武器晋阶：那个改变一切的隐藏系统</span>
+  </div>
+
+  <div class="article-meta">Windrose · 2026-06-05</div>
+  <h1>Windrose 武器晋阶：那个改变一切的隐藏系统</h1>
+
+  <p>每个真正玩透Windrose的玩家，大概都有过同一个顿悟时刻——意识到自己一直在用半个升级系统盲目混战。你找到一把称手的武器，往升级站里塞材料直到八级，感觉还不错。然后有人在社区里提到"晋阶选项卡"，你愣住了：什么晋阶？在哪？你重新打开武器工坊，盯着那个打开过无数次的界面，第一次发现原来有一整个功能一直被锁在背后。</p>
+
+  <p>武器晋阶是Windrose里影响最深远的成长机制之一，而游戏几乎没有主动提示你它的存在。真正理解这个系统——尤其是搞清楚<em>什么时候</em>该用它——才是那些在诅咒沼泽里如鱼得水的玩家和总觉得装备跟不上的玩家之间真正的分水岭。</p>
+
+  <h2>两套系统，一团混乱</h2>
+
+  <p>大多数玩家困惑的根源在于：Windrose有两套完全独立的升级系统，界面几乎毫无关联，还分属不同的建筑。第一套是<strong>升级站</strong>——一个单独搭建的建筑，与其他所有合成台分开，处理武器、护甲和背包的等级提升（1到8级），用铁、铜等标准材料逐步强化基础属性。大多数玩家最终都会摸索到这里，因为它的逻辑和其他生存游戏的强化系统几乎一致。</p>
+
+  <p>第二套是<strong>武器晋阶</strong>，入口在完全不同的建筑——武器工坊——而且还藏在武器工坊的升级操作之后。升级站改变的是数字，晋阶改变的是武器的<em>本质</em>。满级的稀有武器只是更强的同一把武器，而晋阶成史诗的武器会带来截然不同的战斗体验：新被动激活，战斗节奏改变，有些流派只有在正确的武器完成晋阶之后才真正成立。</p>
+
+  <h2>解锁晋阶选项卡</h2>
+
+  <p>武器工坊里的晋阶选项卡只在你<strong>升级武器工坊本体</strong>之后才会出现——而这个升级有一条大多数玩家都会走错顺序的前置链。你需要两样东西：<strong>铁砧</strong>和<strong>风箱</strong>。</p>
+
+  <p>铁砧在你第一次找到铁矿石时就会解锁配方，早到几乎不算门槛。风箱才是真正的卡点。制作风箱需要<strong>沼泽金属锭</strong>，这东西由远古碎片和泥淖粉末在大型冶炼炉里冶炼而成，而这两种材料都只产自诅咒沼泽地带。也就是说，武器晋阶被有意设计成中期才能触及的内容，根本没有捷径可走——你必须进沼泽。</p>
+
+  <p>当你备好铁砧和风箱、升级完武器工坊后，晋阶选项卡才会出现。整个前置准备大约需要两到三小时的专项投入，这也是为什么这么多玩家会错过它——它不会主动宣告自己的存在。</p>
+
+  <div class="tip-box">
+    <div class="box-label">探索者提示</div>
+    <p>备齐铁砧和风箱之后，立刻升级武器工坊——哪怕你手头还没有图巴铸锭，也没想好要晋阶哪把武器。先解锁选项卡，你就能提前看到背包里每把武器的晋阶需求，开始有目的地积攒资源，而不是等到"用得上的时候"才发现自己一直在拆错的东西。</p>
+  </div>
+
+  <h2>图巴铸锭的稀缺问题</h2>
+
+  <p>图巴铸锭是武器晋阶的硬通货，稀有程度和Windrose里大多数资源不在一个量级。它无法从矿石冶炼，游戏把它描述为一种远古铜金合金——来源几乎全部是散落在世界各地废墟里的远古宝箱。</p>
+
+  <p>按优先级排列的主要获取途径：诅咒沼泽废墟内部的远古宝箱（需要携带绳索降落进入，大量玩家因为没带绳索而错过这些宝箱）；<strong>星占塔支线任务</strong>，单次可以拿到十九个铸锭，是游戏中密度最高的单一来源；以及各个地标点清图奖励。染病废墟和远古神殿内的普通容器会随时间刷新，每次各给一个铸锭——不算快，但值得定期路过顺手拿。</p>
+
+  <p>关键是要学会克制。图巴铸锭一旦用于晋阶就无法取回。拆解台确实能退回武器的基础合成材料，但晋阶消耗的铸锭永久消失。把铸锭花在两小时后就会替换掉的武器上，是Windrose里最常见、也最容易避免的失误之一。</p>
+
+  <div class="note-box">
+    <div class="box-label">晋阶前问自己</div>
+    <p>这把武器是终局配装的一部分，还是过渡品？对于会带到最后的武器，每一枚铸锭都物超所值。对于你已经打算替换的武器，晋阶只是一堂代价高昂的教训。</p>
+  </div>
+
+  <h2>哪些武器值得晋阶</h2>
+
+  <p>并不是所有武器都能从晋阶中获得同等收益，当前社区已经形成了比较清晰的共识。<strong>瘟疫战戟</strong>晋阶后在使用特殊攻击时恢复35%生命值，这个被动让它成为游戏里持久战能力最强的武器之一。<strong>毁灭细剑</strong>晋阶后在引爆标记时恢复40%生命值，适合喜欢精准出手、节奏激进的打法。</p>
+
+  <p>在更广泛的武器梯度里，千刃细剑凭借叠层流血被动赢得口碑——最多叠五层，击杀流血敌人时剩余层数会立刻转移到附近最近的敌人，让它从单体武器蜕变成清群利器。军刀依然是最平衡的选择：攻击范围广、体力消耗低，晋阶被动鼓励多目标正面开战。对于围绕精准属性构建流派的玩家——这是当前版本主流的强度路线——晋阶细剑类或高暴击武器能带来最大的单次强度跃升。</p>
+
+  <p>还有一点必须记住：只有稀有（蓝色）及以上品质的武器才能晋阶。如果晋阶选项卡显示某件武器不符合条件，先确认它的品质，别急着认为是系统出了问题。</p>
+
+  <h2>这是一场长局</h2>
+
+  <p>武器晋阶不只是一次属性强化，它是一种承诺。选择晋阶哪把武器，迫使你认真思考自己到底想怎么玩Windrose——不是手头恰好有铸锭时随便选一把最顺眼的，而是真正考虑清楚自己的风格和方向。这种被稀缺资源约束的选择时刻，正是Windrose养成设计最出彩的地方。</p>
+
+  <p>从晋阶系统里收获最多的玩家，往往是那些在解锁选项卡之后，先把每把武器的隐藏被动挨个看完、对照自己的打法仔细权衡、然后耐心等待那把真正该投入的武器出现的人。这套系统奖励的是好奇心和耐性，而不是速度。</p>
+
+  <p>如果你一直觉得中期之后装备的成长感消失了，原因很可能就在这里。升级站从一开始就是地板，武器晋阶才是天花板——而它一直在等你来发现它。</p>
+
+  <a href="/zh/games/windrose/guides/weapon-ascension-guide.html" class="guide-link">→ 完整武器晋阶攻略</a>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">🗺 RelicTrek</div>
+    <div class="footer-links">
+      <a href="/zh/">首页</a>
+      <a href="/zh/games/">游戏</a>
+      <a href="/zh/blog/">博客</a>
+      <a href="/zh/about.html">关于</a>
+      <a href="/zh/privacy.html">隐私</a>
+    </div>
+    <div class="footer-copy">© 2025 RelicTrek · Independent game guides for curious explorers</div>
+  </div>
+</footer>
+
+</body>
+</html>
