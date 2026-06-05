@@ -1,5 +1,96 @@
 # RelicTrek — Work Log
 
+## 2026-06-05 — BMW 专区补全至 30 件攻略（第3批：物品21-30）
+
+### BMW 攻略创建（第3批，补全至30件）
+| 批次 | 物品编号 | 创建文件数 |
+|------|----------|-----------|
+| 第1批 | 1-10 | 先前完成 |
+| 第2批 | 11-20 | 先前完成 |
+| 第3批 | 21-30 | 本会话 — 10 EN + 10 ZH |
+
+**总计：30 篇攻略 × 2 语言 = 60 篇 BMW guides + 2 个 index = 62 个 BMW 专区文件**
+
+### 本会话创建的 10 篇新攻略 — Commit `4033bd6`
+
+| # | Slug | EN 标题 | ZH 标题 |
+|---|------|---------|---------|
+| 21 | `hundred-eye-boss-route` | Hundred-Eye Demon Lord Route | 百目魔君任务链→第三破天角 |
+| 22 | `plantain-fan` | Plantain Fan | 铁扇公主·芭蕉扇法宝 |
+| 23 | `matianba-transformation-route` | Ma Tianba Transformation Chain | 马天霸变身任务链 |
+| 24 | `great-sage-armor-set` | Great Sage Armor Set | 齐天大圣套装 |
+| 25 | `all-transformations-route` | All 10 Transformations Route | 全10种变身法术路线 |
+| 26 | `best-spirits-route` | Best Spirits Route | 全精魄高价值选取路线 |
+| 27 | `missable-guide` | Permanently Missable Guide | 章节不归路与永久错过清单 |
+| 28 | `ng-plus-route` | NG+ Complete Route | 二周目完整武装路线 |
+| 29 | `bodhi-seed-system` | Bodhi Patriarch Seed System | 须菩提植物种子系统完整路线 |
+| 30 | `chapter6-hidden-areas` | Chapter 6 Hidden Exploration Route | 第六章隐藏区域完整探索路线 |
+
+### 配套更新
+- **EN index** (`en/games/bmw/index.html`): 20 → 30 Relics Mapped，新增 10 张 relic card
+- **ZH index** (`zh/games/bmw/index.html`): 已收录 20 → 30 件圣物，新增 10 张 relic card
+- **Sitemap**: 新增 20 个 URL（EN+ZH 各 10 个）。Rebase 时与远程 auto-sitemap 冲突，已手动解决
+- **现有文件**: 前 20 篇攻略均未被修改
+
+### BMW 专区最终验证
+- ✅ 10/10 新 slugs 在 EN 和 ZH 均完整存在
+- ✅ EN BMW 文件数：31（30 guides + 1 index）
+- ✅ ZH BMW 文件数：31（30 guides + 1 index）
+- ✅ 所有 HTML 文件自包含（inline CSS/JS，仅外部依赖 Google Fonts + GA + AdSense）
+- ✅ 所有页面包含 6 节结构、侧边栏、面包屑、canonical + hreflang 标签
+- ✅ Sitemap 包含全部 20 个新 URL
+
+### BMW 专区文件清单（30 篇完整）
+```
+en/games/bmw/ (31 files: 30 guides + index)
+├── all-transformations-route.html  [NEW]
+├── best-spirits-route.html         [NEW]
+├── bishui-cave.html
+├── bodhi-seed-system.html          [NEW]
+├── celestial-pills.html
+├── chapter6-hidden-areas.html      [NEW]
+├── dark-thunder-transformation.html
+├── fireproof-mantle.html
+├── five-skandhas-pill.html
+├── great-sage-armor-set.html       [NEW]
+├── hundred-eye-boss-route.html     [NEW]
+├── index.html                      [UPDATED]
+├── loong-scales-chain.html
+├── man-in-stone.html
+├── matianba-transformation-route.html [NEW]
+├── mind-core-medicine.html
+├── missable-guide.html             [NEW]
+├── ng-plus-route.html              [NEW]
+├── plantain-fan.html               [NEW]
+├── prisoner-questline.html
+├── purple-talismans.html
+├── sky-piercing-horn.html
+├── snow-fox-questline.html
+├── stormflash-loong-staff.html
+├── supreme-gourd.html
+├── triple-tipped-spear.html
+├── turtle-island-guide.html
+├── weavers-needle.html
+├── wind-tamer-vessel.html
+├── wukong-armor-jingubang.html
+└── zodiac-village.html
+
+zh/games/bmw/ (31 files: 30 guides + index)
+└── (same filenames as above)
+```
+
+### 跨专区统计
+| 游戏专区 | 攻略数 | 状态 |
+|----------|--------|------|
+| Black Myth: Wukong (BMW) | 30 | ✅ 完成 |
+| Baldur's Gate 3 (BG3) | 30 | ✅ 完成 |
+| Elden Ring (ER) | 30 | ✅ 完成 |
+| Clair Obscur: Expedition 33 (COE33) | 13 | 🚧 进行中 |
+| The Witcher 3 (TW3) | 12 | 🚧 进行中 |
+| Monster Hunter Wilds (MHWilds) | 11 | 🚧 进行中 |
+| Windrose | 12 | 🚧 进行中 |
+
+---
 ## 2026-06-04 — BG3 专区全部 30 件攻略完成 + 全面审计
 
 ### BG3 攻略创建（全部 5 组）
