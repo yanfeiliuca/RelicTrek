@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最强Lumina组合——每个角色和玩法的最优配置 | RelicTrek 圣物寻踪</title>
+<meta name="description" content="远征队33中维尔索、玛艾勒、赛尔和全队各角色的最优Lumina组合。覆盖AP再生、爆发输出和生存配置，针对终盘Boss战优化。">
+<meta name="keywords" content="COE33 最强Lumina, 远征队33 构筑指南, Lumina组合, 终盘配置">
+<link rel="canonical" href="https://relictrek.com/zh/games/coe33/best-lumina-builds.html">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/games/coe33/best-lumina-builds.html">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/games/coe33/best-lumina-builds.html">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/games/coe33/best-lumina-builds.html">
+<meta property="og:title" content="最强Lumina组合——每个角色的最优配置 | RelicTrek 圣物寻踪">
+<meta property="og:description" content="远征队33全角色最优Lumina组合。AP再生、爆发输出和生存配置，针对终盘Boss战优化。">
+<meta property="og:type" content="article"><meta property="og:url" content="https://relictrek.com/zh/games/coe33/best-lumina-builds.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel','Noto Sans SC',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter','Noto Sans SC',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.8;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.03em}nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:1.75rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.02em}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+.page-header{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:2.5rem 2rem 0}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.25rem}.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-header{margin-bottom:2rem}.tags{display:flex;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap}
+.tag{padding:.25rem .7rem;font-size:.7rem;font-weight:600;letter-spacing:.05em;border-radius:3px}
+.tag-armor{background:rgba(245,185,69,.12);color:var(--gold);border:1px solid rgba(245,185,69,.2)}
+.tag-weapon{background:rgba(168,85,247,.12);color:#a855f7;border:1px solid rgba(168,85,247,.2)}
+.tag-endgame{background:rgba(232,93,4,.1);color:var(--red);border:1px solid rgba(232,93,4,.2)}
+.tag-melee{background:rgba(42,157,143,.12);color:var(--teal);border:1px solid rgba(42,157,143,.2)}
+.tag-build{background:rgba(92,141,202,.12);color:var(--info);border:1px solid rgba(92,141,202,.2)}
+.article-header h1{font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--gold);line-height:1.4;margin-bottom:.75rem;text-shadow:0 0 20px rgba(245,185,69,.25)}
+.article-meta{display:flex;gap:1.5rem;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.quick-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:2.5rem}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;text-align:center;transition:border-color .2s,box-shadow .2s}
+.stat-card:hover{border-color:var(--border-gold);box-shadow:0 0 20px var(--gold-glow)}
+.stat-card .stat-value{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);line-height:1.2}
+.stat-card .stat-label{font-size:.72rem;color:var(--muted);margin-top:.35rem;letter-spacing:.04em}
+.main-layout{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:1fr 300px;gap:2.5rem}
+.main-content{min-width:0}.sidebar{position:sticky;top:84px;align-self:start}
+section{margin-bottom:2.5rem}
+section h2{font-family:var(--font-heading),'Rajdhani',sans-serif;font-size:1.35rem;font-weight:600;color:var(--gold);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+section h3{font-size:1.05rem;font-weight:600;color:var(--text);margin:1.25rem 0 .6rem}
+section p{margin-bottom:.85rem;color:var(--text-dim);font-size:.92rem}
+section ul,section ol{margin:.6rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.92rem}section li{margin-bottom:.4rem}
+.material-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s}
+.material-card:hover{border-color:var(--border-gold)}.material-card .mat-name{font-weight:600;font-size:1rem;color:var(--text);margin-bottom:.35rem}
+.material-card .mat-meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;margin-top:.6rem}
+.mat-meta-item{display:flex;align-items:center;gap:.35rem}.mat-meta-item.danger{color:var(--red)}.mat-meta-item.bonus{color:var(--teal)}.mat-meta-item.info{color:var(--info)}
+.danger-box,.bonus-box{padding:1rem 1.25rem;border-radius:8px;margin-bottom:.85rem;font-size:.9rem}
+.danger-box{background:rgba(232,93,4,.08);border-left:3px solid var(--red)}.danger-box .box-label{font-weight:600;color:var(--red);margin-bottom:.3rem;font-size:.8rem;letter-spacing:.04em}
+.bonus-box{background:rgba(42,157,143,.08);border-left:3px solid var(--teal)}.bonus-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.8rem;letter-spacing:.04em}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin-bottom:.85rem;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.8rem;letter-spacing:.04em}
+table.mat-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.mat-table th{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.06em;color:var(--muted);text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border)}
+.mat-table td{padding:.6rem .75rem;border-bottom:1px solid var(--border);color:var(--text-dim)}
+.mat-table td:first-child{color:var(--text);font-weight:500}
+.sidebar-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-family:var(--font-heading);font-size:.85rem;font-weight:600;color:var(--gold);margin-bottom:1rem;letter-spacing:.03em}
+.sidebar-card ul{list-style:none;font-size:.85rem}.sidebar-card li{margin-bottom:.55rem}.sidebar-card a{color:var(--text-dim);font-size:.85rem}.sidebar-card a:hover{color:var(--gold)}
+.ad-placeholder{background:var(--bg-elevated);border:1px dashed var(--border);border-radius:8px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;letter-spacing:.05em}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:3rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--font-heading);font-size:.8rem;font-weight:600;color:var(--gold);margin-bottom:.85rem;letter-spacing:.06em}
+footer ul{list-style:none}footer li{margin-bottom:.45rem}footer a,footer p{font-size:.82rem;color:var(--muted)}footer a:hover{color:var(--gold)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);text-align:center}
+@media(max-width:900px){.main-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.quick-stats{grid-template-columns:repeat(2,1fr)}nav .nav-links{display:none}.article-header h1{font-size:1.5rem}}
+@media(max-width:600px){.quick-stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}nav{padding:0 1rem}.main-layout{padding:0 1rem 2rem}.page-header{padding:2rem 1rem 0}}
+</style>
+</head>
+<body>
+
+<nav><a href="/zh/" class="logo"><span>🧭</span>RelicTrek 圣物寻踪</a><ul class="nav-links"><li><a href="/zh/games/">游戏</a></li><li><a href="/zh/games/windrose/">攻略</a></li><li><a href="/zh/blog/">博客</a></li><li><a href="/zh/about.html">关于</a></li></ul><div class="nav-right"><div class="lang-switch"><a href="/en/games/coe33/best-lumina-builds.html">EN</a><a href="/zh/games/coe33/best-lumina-builds.html" class="active">中文</a></div></div></nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/games/">游戏</a> &rsaquo; <a href="/zh/games/coe33/">往日不再·远征队33</a> &rsaquo; <span>最强Lumina组合</span></div>
+  <div class="article-header">
+    <div class="tags"><span class="tag tag-build">构筑</span><span class="tag tag-endgame">终盘</span><span class="tag tag-armor">生存</span><span class="tag tag-weapon">输出</span></div>
+    <h1>最强Lumina组合——每个角色和玩法的最优配置</h1>
+    <div class="article-meta"><span>🕐 阅读时间约15分钟</span><span>⚙️ 6角色配置</span><span>📍 终盘优化</span><span>⚠️ 需要全Lumina解锁</span><span>📅 更新2026年6月5日</span></div>
+  </div>
+  <div class="quick-stats">
+    <div class="stat-card"><div class="stat-value">⚔️ 维尔索</div><div class="stat-label">主力输出</div></div>
+    <div class="stat-card"><div class="stat-value">🔥 玛艾勒</div><div class="stat-label">灼烧/副输出</div></div>
+    <div class="stat-card"><div class="stat-value">🛡️ 赛尔</div><div class="stat-label">支援/爆发</div></div>
+    <div class="stat-card"><div class="stat-value">🌊 艾斯基</div><div class="stat-label">探索/生存</div></div>
+    <div class="stat-card"><div class="stat-value">💡 6套</div><div class="stat-label">角色专属配置</div></div>
+  </div>
+</div>
+
+<div class="main-layout"><div class="main-content">
+
+  <section id="why">
+    <h2>第一节 — 为什么你需要它</h2>
+    <p>Lumina是《往日不再·远征队33》中最容易被低估的系统。许多玩家通关时只用了一套泛用配置——这在主线流程中或许够用，但在终盘内容（无尽塔、强化Boss、Clea战、Simon战）中，错误的Lumina选择直接等于团灭。</p>
+    <p>每个角色有6个Lumina槽位。游戏中总共有超过40种不同的Lumina——但其中大约15个在终盘中真正有用。其余要么数值过低，要么触发条件在高压战斗中不切实际。</p>
+    <p>本文档基于社区验证的终盘Boss战数据，为每个角色和主要玩法提供最优Lumina配置。无论是追求最高AP再生效率的续航流，还是最大化爆发窗口的输出流，或者针对特定Boss的生存流，这里都有经过实战检验的方案。</p>
+  </section>
+
+  <section id="what">
+    <h2>第二节 — Lumina系统核心原则</h2>
+    <h3>终盘Lumina优先级排序</h3>
+    <p>在终盘内容中，Lumina的价值按以下优先级排列：</p>
+    <ol>
+      <li><strong>AP再生</strong>——没有AP就没有技能，没有技能就没有伤害。这是所有构筑的第一优先级。</li>
+      <li><strong>生存保障</strong>——「第二次机会」Lumina是终盘Boss战的入场券。其他一切都可以妥协，这个不行。</li>
+      <li><strong>完美度维持</strong>——维尔索的A级不死被动、玛艾勒的暴击触发都依赖完美度等级。</li>
+      <li><strong>爆发伤害增幅</strong>——在确保前三项之后，剩下的槽位用于提升输出。</li>
+      <li><strong>元素协同</strong>——根据队伍元素搭配选择特定元素增幅Lumina。</li>
+    </ol>
+    <div class="note-box"><div class="box-label">💡 黄金法则</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">先保证不死，再考虑输出。任何没有装备「第二次机会」的角色在终盘Boss战中都是队伍的致命弱点。</p></div>
+  </section>
+
+  <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #1</div>
+
+  <section id="prereqs">
+    <h2>第三节 — 维尔索（Verso）配置</h2>
+    <p>维尔索是队伍的核心输出，尤其是在装备Simoso之后。他的构筑围绕维持A级完美度和最大化光属性伤害展开。</p>
+
+    <h3>终盘通用配置（Simoso装备后）</h3>
+    <table class="mat-table">
+      <tr><th>槽位</th><th>Lumina</th><th>效果</th><th>优先级</th></tr>
+      <tr><td>1</td><td>第二次机会</td><td>死亡时以1 HP复活（每场战斗一次）</td><td>必修</td></tr>
+      <tr><td>2</td><td>AP再生+</td><td>每回合额外恢复AP，技能使用频率提升约40%</td><td>必修</td></tr>
+      <tr><td>3</td><td>完美度守护</td><td>被击中时完美度下降幅度减半</td><td>必修</td></tr>
+      <tr><td>4</td><td>光属性增幅</td><td>光属性伤害+25%（与Simoso被动叠加）</td><td>核心</td></tr>
+      <tr><td>5</td><td>暴击触发</td><td>完美格挡后下次攻击必暴击</td><td>推荐</td></tr>
+      <tr><td>6</td><td>极度强大</td><td>HP全满时伤害+30%</td><td>推荐</td></tr>
+    </table>
+
+    <h3>替代选项</h3>
+    <ul>
+      <li><strong>作弊者</strong>——如果你对自己的格挡足够自信，用「作弊者」替换「完美度守护」可以进一步推高伤害上限</li>
+      <li><strong>灼烧协同</strong>——与玛艾勒组队时，将槽位5替换为「灼烧增幅」，利用玛艾勒的灼烧触发维尔索的额外伤害</li>
+    </ul>
+  </section>
+
+  <section id="maelle">
+    <h2>第四节 — 玛艾勒（Maelle）配置</h2>
+    <p>玛艾勒在终盘的定位是灼烧流核心和副输出。她的Medalum技能组与灼烧机制高度协同——在Clea战和部分强化Boss战中，灼烧流是最高效的输出来源。</p>
+
+    <h3>灼烧流终盘配置</h3>
+    <table class="mat-table">
+      <tr><th>槽位</th><th>Lumina</th><th>效果</th><th>优先级</th></tr>
+      <tr><td>1</td><td>第二次机会</td><td>死亡时复活</td><td>必修</td></tr>
+      <tr><td>2</td><td>AP再生+</td><td>技能循环核心</td><td>必修</td></tr>
+      <tr><td>3</td><td>灼烧大师</td><td>灼烧层数上限+3，每层伤害+15%</td><td>核心</td></tr>
+      <tr><td>4</td><td>火属性增幅</td><td>火属性伤害+25%</td><td>核心</td></tr>
+      <tr><td>5</td><td>持续伤害延长</td><td>灼烧持续时间+2回合</td><td>推荐</td></tr>
+      <tr><td>6</td><td>暴击触发</td><td>完美闪避后下次攻击必暴击</td><td>推荐</td></tr>
+    </table>
+
+    <div class="note-box"><div class="box-label">💡 灼烧vs直接伤害</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">在Clea战中灼烧流表现出色，但在感谢更新的强化Boss中，部分Boss会在阶段转换时清除debuff。如果目标Boss有此机制，将「持续伤害延长」替换为「火焰爆发」（灼烧层数达到上限时一次性释放全部伤害）。</p></div>
+  </section>
+
+  <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #2</div>
+
+  <section id="sciel">
+    <h2>第五节 — 赛尔（Sciel）配置</h2>
+    <p>赛尔是队伍的支援核心和爆发窗口触发器。她的价值不在于持续输出，而在于在正确的时机释放正确的技能——特别是她的团队AP恢复能力和爆发窗口延长效果。</p>
+
+    <h3>支援/爆发配置</h3>
+    <table class="mat-table">
+      <tr><th>槽位</th><th>Lumina</th><th>效果</th><th>优先级</th></tr>
+      <tr><td>1</td><td>第二次机会</td><td>死亡时复活</td><td>必修</td></tr>
+      <tr><td>2</td><td>团队AP再生</td><td>每回合为全队恢复少量AP</td><td>核心</td></tr>
+      <tr><td>3</td><td>爆发窗口延长</td><td>破防状态持续时间+1回合</td><td>核心</td></tr>
+      <tr><td>4</td><td>治疗强化</td><td>治疗技能效果+30%</td><td>推荐</td></tr>
+      <tr><td>5</td><td>异常状态抵抗</td><td>全队异常状态持续时间减半</td><td>推荐</td></tr>
+      <tr><td>6</td><td>AP再生+</td><td>个人AP续航</td><td>推荐</td></tr>
+    </table>
+
+    <p>赛尔的Lumina配置几乎不需要针对特定Boss调整——她的角色定位决定了这套配置在99%的终盘战斗中都是最优解。唯一的例外是：如果你在挑战不需要治疗续航的极限爆发战（如无尽塔竞速），将「治疗强化」替换为「光属性增幅」即可。</p>
+  </section>
+
+  <section id="other">
+    <h2>第六节 — 其余角色快速配置</h2>
+
+    <h3>艾斯基（Esquie）——探索/生存</h3>
+    <p>艾斯基在终盘战斗中的定位偏辅助。她的游泳和飞行能力在探索中至关重要，但在Boss战中推荐以下配置：</p>
+    <ul>
+      <li>必修：第二次机会、AP再生+、生存本能（HP低于30%时防御+50%）</li>
+      <li>推荐：冰属性增幅、异常状态抵抗、团队AP再生</li>
+    </ul>
+
+    <h3>古斯塔夫（Gustave）——物理爆发</h3>
+    <p>古斯塔夫在部分终盘战斗中有特定价值。他的高单次伤害适合爆发窗口：</p>
+    <ul>
+      <li>必修：第二次机会、AP再生+、暴击触发</li>
+      <li>推荐：物理增幅、极度强大、破防伤害+</li>
+    </ul>
+
+    <h3>吕纳（Luna）——元素支持</h3>
+    <p>吕纳的元素覆盖范围最广，适合应对需要频繁切换元素类型的战斗：</p>
+    <ul>
+      <li>必修：第二次机会、AP再生+</li>
+      <li>推荐：元素大师（全元素伤害+15%）、异常状态抵抗、治疗强化</li>
+    </ul>
+
+    <div class="danger-box"><div class="box-label">⚠ 全队通用规则</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">所有六名队员都必须装备「第二次机会」Lumina。即便某个角色只在强制换人时才会上场——Simon战的第二阶段和第三阶段就是最好的例子——没有「第二次机会」的角色会在出现的一瞬间成为致命漏洞。全队6槽位中，第一个槽位永远属于第二次机会。</p></div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-card"><h4>本页导航</h4><ul><li><a href="#why">第一节 — 为什么你需要它</a></li><li><a href="#what">第二节 — Lumina系统核心原则</a></li><li><a href="#prereqs">第三节 — 维尔索配置</a></li><li><a href="#maelle">第四节 — 玛艾勒配置</a></li><li><a href="#sciel">第五节 — 赛尔配置</a></li><li><a href="#other">第六节 — 其余角色快速配置</a></li></ul></div>
+  <div class="sidebar-card"><h4>快捷导航</h4><ul><li><a href="/zh/games/coe33/">← 往日不再·远征队33 首页</a></li><li><a href="/zh/games/coe33/">← 全部 COE33 攻略</a></li><li><a href="/zh/">← RelicTrek 首页</a></li></ul></div>
+  <div class="ad-placeholder">Google AdSense<br>300×250</div>
+</aside>
+</div>
+
+<footer><div class="footer-grid">
+  <div><h4>RelicTrek 圣物寻踪</h4><p style="color:var(--text-dim)">每一件圣物都有迹可循。我们绘制寻宝之路。</p></div>
+  <div><h4>游戏</h4><ul><li><a href="/zh/games/windrose/">Windrose</a></li><li><a href="/zh/games/mhwilds/">怪物猎人：荒野</a></li><li><a href="/zh/games/coe33/">往日不再·远征队33</a></li><li><a href="/zh/games/">全部游戏</a></li></ul></div>
+  <div><h4>关于</h4><ul><li><a href="/zh/about.html">关于我们</a></li><li><a href="/zh/contact.html">联系方式</a></li><li><a href="/zh/blog/">博客</a></li></ul></div>
+  <div><h4>法律</h4><ul><li><a href="/zh/privacy.html">隐私政策</a></li><li><a href="/zh/terms.html">服务条款</a></li></ul></div>
+</div><div class="footer-bottom"><p>&copy; 2026 RelicTrek。本站为粉丝站点，与Sandfall Interactive或任何游戏开发商/发行商无关。</p></div></footer>
+</body>
+</html>
