@@ -1,5 +1,39 @@
 # RelicTrek — Work Log
 
+## 2026-06-06 — BMW 首页重排 + COE33 14-18 修订版上线
+
+### BMW 首页重排 — Commit `597abd6`
+- 按游戏内获取/推进顺序重排 BMW 中英文首页 30 张圣物卡片
+- EN/ZH 保持同样顺序
+- 仅修改 `en/games/bmw/index.html` 与 `zh/games/bmw/index.html`
+- 30 篇 BMW 攻略正文未改动
+- 已推送到 GitHub `main`
+
+### COE33 Guides 14-18 修订版上线 — Commit `c6889d7`
+| # | Slug | EN 主题 | ZH 主题 |
+|---|------|---------|---------|
+| 14 | `esquie-all-abilities` | Esquie ability unlock route | 埃斯奇全能力解锁路线 |
+| 15 | `manor-complete-route` | The Manor complete route | 庄园完整探索路线 |
+| 16 | `all-side-quests` | All side quests checklist | 全支线任务清单 |
+| 17 | `character-specific-weapons` | Character-specific weapons | 角色专属武器路线 |
+| 18 | `thank-you-update` | Thank You Update content | 感谢更新内容路线 |
+
+### 配套更新与验证
+- 新增 10 个 COE33 页面：5 EN + 5 ZH
+- `en/games/coe33/index.html` 与 `zh/games/coe33/index.html`：13 → 18 Relics
+- `en/games/index.html` 与 `zh/games/index.html`：COE33 计数 13 → 18
+- `sitemap.xml` 重新生成，当前为 365 个 URL
+- 第17篇从原 `clea-boss` 改为 `character-specific-weapons`，避免与现有 `flying-manor-clea` 语义重复
+- `thank-you-update` 聚焦 Root of All Evil、Enhanced Endless Tower、新 Gestral Merchant；Verso's Drafts 继续指向现有独立页
+- 移动端检查发现中文详情页长标题横向裁切，已通过短 H1 + 响应式 overflow guard 修复
+- 推送后确认 `origin/main` 位于 `c6889d7`
+
+### Agent 交接文档
+- 新增根目录 `CODEX_README.md`
+- 同步更新根目录 `PROGRESS.md` 与仓库内 `PROGRESS.md`
+
+---
+
 ## 2026-06-05 — BMW 专区补全至 30 件攻略（第3批：物品21-30）
 
 ### BMW 攻略创建（第3批，补全至30件）
@@ -80,13 +114,15 @@ zh/games/bmw/ (31 files: 30 guides + index)
 ```
 
 ### 跨专区统计
+**当前总计：7 款游戏 / 161 篇攻略**
+
 | 游戏专区 | 攻略数 | 状态 |
 |----------|--------|------|
 | Black Myth: Wukong (BMW) | 30 | ✅ 完成 |
 | Baldur's Gate 3 (BG3) | 30 | ✅ 完成 |
 | Elden Ring (ER) | 30 | ✅ 完成 |
-| Clair Obscur: Expedition 33 (COE33) | 13 | 🚧 进行中 |
-| The Witcher 3 (TW3) | 12 | 🚧 进行中 |
+| The Witcher 3 (TW3) | 30 | ✅ 完成 |
+| Clair Obscur: Expedition 33 (COE33) | 18 | 🚧 进行中 |
 | Monster Hunter Wilds (MHWilds) | 11 | 🚧 进行中 |
 | Windrose | 12 | 🚧 进行中 |
 
