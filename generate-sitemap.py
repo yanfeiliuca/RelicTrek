@@ -37,39 +37,63 @@ def classify(path: str) -> str:
     # /en/ or /zh/ homepages
     if re.match(r"^(en|zh)/index\.html$", path):
         return "home"
-    # Guide detail pages
-    if "/guides/" in path:
-        return "guide"
     # Game hub pages (e.g. /en/games/windrose/index.html)
     if "/games/" in path and path.endswith("/index.html"):
-        # Check if it's a specific game page or the games list
         parts = path.split("/")
         # /en/games/index.html -> game_index (list of games)
         # /en/games/windrose/index.html -> game_hub (specific game)
         if len([p for p in parts if p and p != "index.html"]) >= 3:
             return "game_hub"
         return "game_index"
+    # Game detail pages are guide pages even when they are not under /guides/.
+    if "/games/" in path:
+        return "guide"
     # Info pages (about, privacy, terms, contact)
     if any(p in path for p in ["about", "privacy", "terms", "contact"]):
         return "info"
-    # Blog pages (future)
+    # Blog pages
     if "/blog/" in path:
         return "game_index"
     return "default"
 
 
+def is_redirect_like(full_path: str) -> bool:
+    """Return True for HTML shim pages that only redirect elsewhere."""
+    with open(full_path, "r", encoding="utf-8", errors="ignore") as f:
+        html = f.read(4096).lower()
+    return (
+        "<title>moved permanently</title>" in html
+        or "http-equiv=\"refresh\"" in html
+        or "window.location.replace" in html
+    )
+
+
 def find_html_files(root: str) -> list:
-    """Recursively find all .html files, return relative paths."""
+    """Recursively find indexable .html files, return relative paths."""
     html_files = []
     for dirpath, _, filenames in os.walk(root):
         for f in filenames:
             if f.endswith(".html"):
                 full = os.path.join(dirpath, f)
                 rel = os.path.relpath(full, root).replace("\\", "/")
-                # Skip files in .git or scripts directories
-                if not rel.startswith(".") and "scripts/" not in rel:
-                    html_files.append(rel)
+                # Skip files in .git or scripts directories. Keep root index handled separately.
+                if rel.startswith(".") or "scripts/" in rel:
+                    continue
+                if rel != "index.html" and is_redirect_like(full):
+                    continue
+                html_files.append(rel)
     return sorted(html_files)
+
+
+def canonical_path(path: str) -> str:
+    """Convert a local HTML path into the public canonical URL path."""
+    if path == "index.html":
+        return "/"
+    if path.endswith("/index.html"):
+        return "/" + path[: -len("index.html")]
+    if path.endswith(".html"):
+        return "/" + path[: -len(".html")]
+    return "/" + path
 
 
 def build_sitemap(files: list) -> Element:
@@ -87,7 +111,7 @@ def build_sitemap(files: list) -> Element:
 
         url_el = SubElement(urlset, "url")
         loc = SubElement(url_el, "loc")
-        loc.text = f"{BASE_URL}/{path.replace('index.html', '')}"
+        loc.text = f"{BASE_URL}{canonical_path(path)}"
 
         lastmod = SubElement(url_el, "lastmod")
         lastmod.text = today
