@@ -5,9 +5,9 @@
 Set-Location $PSScriptRoot
 
 # ── 本次提交配置（由 Claude 在每次编辑完毕后更新）─────────────────────
-$MESSAGE = "待更新"
+$MESSAGE = "add git-push-edit.ps1 — manual edit commit helper"
 $FILES   = @(
-    "待更新"
+    "git-push-edit.ps1"
 )
 # ──────────────────────────────────────────────────────────────────────
 
