@@ -1,54 +1,194 @@
-# git-push-edit.ps1 — RelicTrek 页面编辑提交助手
-# Claude 在每次编辑完成后会重写 FILES 和 MESSAGE 两个变量。
-# 使用方法：在 Terminal 运行  pwsh git-push-edit.ps1
+# git-push-edit.ps1 — RelicTrek safe manual publish helper
+#
+# Default behavior is DRY-RUN ONLY. It never commits or pushes unless the caller
+# explicitly passes -Commit and/or -Push.
+#
+# Examples:
+#   pwsh git-push-edit.ps1 -Message "Fix page copy" -Files en/page.html zh/page.html
+#   pwsh git-push-edit.ps1 -Commit -Message "Fix page copy" -Files en/page.html zh/page.html
+#   pwsh git-push-edit.ps1 -Commit -Push -Message "Fix page copy" -Files en/page.html zh/page.html
 
+param(
+    [string]$Message = "",
+    [string[]]$Files = @(),
+    [switch]$Commit,
+    [switch]$Push,
+    [switch]$AllowSitemap
+)
+
+$ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
-# ── 本次提交配置（由 Claude 在每次编辑完毕后更新）─────────────────────
-$MESSAGE = "add git-push-edit.ps1 — manual edit commit helper"
-$FILES   = @(
-    "git-push-edit.ps1"
-)
-# ──────────────────────────────────────────────────────────────────────
+function Fail($Text) {
+    Write-Host "ERROR: $Text" -ForegroundColor Red
+    exit 1
+}
 
-# 清除残留锁文件
-Remove-Item -Force ".git/index.lock" -ErrorAction SilentlyContinue
-Remove-Item -Force ".git/HEAD.lock"  -ErrorAction SilentlyContinue
-
-Write-Host ""
-Write-Host "== RelicTrek git-push-edit ==" -ForegroundColor Cyan
-Write-Host "Commit: $MESSAGE" -ForegroundColor Yellow
-Write-Host "Files ($($FILES.Count)):" -ForegroundColor Cyan
-foreach ($f in $FILES) { Write-Host "  $f" }
-Write-Host ""
-
-# 仅 stage 指定文件
-foreach ($f in $FILES) {
-    git add $f
+function RunGit($ArgsList) {
+    & git @ArgsList
     if ($LASTEXITCODE -ne 0) {
-        Write-Host "ERROR: git add 失败 — $f" -ForegroundColor Red
-        Read-Host "按 Enter 退出"
-        exit 1
+        Fail "git $($ArgsList -join ' ') failed"
     }
 }
 
-# Commit
-git commit -m $MESSAGE
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: git commit 失败" -ForegroundColor Red
-    Read-Host "按 Enter 退出"
-    exit 1
+Write-Host ""
+Write-Host "== RelicTrek safe publish helper ==" -ForegroundColor Cyan
+
+if (-not $Commit -and -not $Push -and $Files.Count -eq 0 -and [string]::IsNullOrWhiteSpace($Message)) {
+    Write-Host "No arguments provided. Treating this as a launchd/no-op invocation." -ForegroundColor Yellow
+    Write-Host "No git fetch, add, commit, or push was executed." -ForegroundColor Green
+    exit 0
 }
 
-# Push
-git push
+$branch = (& git branch --show-current).Trim()
+if ($LASTEXITCODE -ne 0 -or $branch -ne "main") {
+    Fail "expected branch main, got '$branch'"
+}
+
+RunGit @("fetch", "origin")
+
+$divergence = (& git rev-list --left-right --count main...origin/main).Trim()
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: git push 失败" -ForegroundColor Red
-    Read-Host "按 Enter 退出"
-    exit 1
+    Fail "could not check main...origin/main divergence"
+}
+if ($divergence -ne "0`t0") {
+    Fail "main and origin/main diverged or are not aligned: $divergence"
+}
+
+if ($Files.Count -eq 0) {
+    Fail "no files were provided. Pass -Files path1 path2 ..."
+}
+
+if ([string]::IsNullOrWhiteSpace($Message)) {
+    Fail "commit message is empty. Pass -Message '...'"
+}
+
+$blockedPrefixes = @(
+    "workdocs/",
+    "daily_plans/",
+    ".codex/",
+    ".agents/"
+)
+
+$blockedExact = @(
+    "CLAUDE.md",
+    ".gitignore",
+    "PROGRESS.md",
+    "git-push-edit.ps1"
+)
+
+$allowedPatterns = @(
+    "^en/.+\.html$",
+    "^zh/.+\.html$",
+    "^en/blog/index\.json$",
+    "^zh/blog/index\.json$",
+    "^\.autoblog-tracker\.json$"
+)
+
+if ($AllowSitemap) {
+    $allowedPatterns += "^sitemap\.xml$"
+}
+
+$normalizedFiles = @()
+foreach ($file in $Files) {
+    $path = $file.Replace("\", "/").Trim()
+    if ([string]::IsNullOrWhiteSpace($path)) {
+        Fail "empty file path in -Files"
+    }
+    if ($path.StartsWith("/") -or $path.Contains("..")) {
+        Fail "only repo-relative paths without '..' are allowed: $path"
+    }
+    foreach ($prefix in $blockedPrefixes) {
+        if ($path.StartsWith($prefix)) {
+            Fail "blocked private/handoff path: $path"
+        }
+    }
+    if ($blockedExact -contains $path) {
+        Fail "blocked file: $path"
+    }
+    if ($path -eq "sitemap.xml" -and -not $AllowSitemap) {
+        Fail "sitemap.xml requires explicit -AllowSitemap"
+    }
+    $allowed = $false
+    foreach ($pattern in $allowedPatterns) {
+        if ($path -match $pattern) {
+            $allowed = $true
+            break
+        }
+    }
+    if (-not $allowed) {
+        Fail "file is outside the allowed publish set: $path"
+    }
+    if (-not (Test-Path -LiteralPath $path)) {
+        Fail "file does not exist: $path"
+    }
+    $normalizedFiles += $path
+}
+
+$status = & git status --short
+Write-Host "Branch: $branch"
+Write-Host "Divergence main...origin/main: $divergence"
+Write-Host "Commit message: $Message" -ForegroundColor Yellow
+Write-Host "Files ($($normalizedFiles.Count)):" -ForegroundColor Cyan
+foreach ($file in $normalizedFiles) {
+    Write-Host "  $file"
+}
+Write-Host ""
+Write-Host "Current git status:" -ForegroundColor Cyan
+if ($status) {
+    $status | ForEach-Object { Write-Host "  $_" }
+} else {
+    Write-Host "  clean"
 }
 
 Write-Host ""
-Write-Host "完成。$($FILES.Count) 个文件已推送。" -ForegroundColor Green
-Write-Host "Commit: $MESSAGE" -ForegroundColor Green
-Read-Host "按 Enter 关闭"
+Write-Host "Diff summary for requested files:" -ForegroundColor Cyan
+& git diff --stat -- @normalizedFiles
+if ($LASTEXITCODE -ne 0) {
+    Fail "could not show diff stat"
+}
+
+if (-not $Commit -and -not $Push) {
+    Write-Host ""
+    Write-Host "DRY RUN ONLY. No git add, commit, or push was executed." -ForegroundColor Green
+    Write-Host "To commit: add -Commit. To commit and push: add -Commit -Push." -ForegroundColor Green
+    exit 0
+}
+
+if ($Push -and -not $Commit) {
+    Fail "-Push requires -Commit in this helper"
+}
+
+Write-Host ""
+Write-Host "Staging requested files only..." -ForegroundColor Cyan
+RunGit (@("add", "--") + $normalizedFiles)
+
+$staged = & git diff --cached --name-only
+if ($LASTEXITCODE -ne 0) {
+    Fail "could not inspect staged files"
+}
+
+$expected = $normalizedFiles | Sort-Object
+$actual = $staged | Sort-Object
+if (($expected -join "`n") -ne ($actual -join "`n")) {
+    Write-Host "Expected staged files:" -ForegroundColor Yellow
+    $expected | ForEach-Object { Write-Host "  $_" }
+    Write-Host "Actual staged files:" -ForegroundColor Yellow
+    $actual | ForEach-Object { Write-Host "  $_" }
+    Fail "staged files do not exactly match requested files"
+}
+
+RunGit @("diff", "--cached", "--check")
+RunGit @("commit", "-m", $Message)
+
+if ($Push) {
+    RunGit @("push", "origin", "main")
+    RunGit @("fetch", "origin")
+    $after = (& git rev-list --left-right --count main...origin/main).Trim()
+    if ($after -ne "0`t0") {
+        Fail "post-push divergence is not clean: $after"
+    }
+    Write-Host "Pushed and verified origin/main." -ForegroundColor Green
+} else {
+    Write-Host "Committed locally. Push was not requested." -ForegroundColor Green
+}
