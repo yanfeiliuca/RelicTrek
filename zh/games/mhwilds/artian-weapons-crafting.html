@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>荒野的故事 Artian 武器合成全攻略——零件、属性与刷取路线 | MH Wilds</title>
+<meta name="description" content="怪物猎人 Wilds Artian 武器完整合成攻略。解锁条件、14种武器零件配方表、R8零件刷取目标怪物、属性选择技巧与强化神卷策略全覆盖。">
+<meta name="keywords" content="怪物猎人Wilds Artian武器,MH Wilds艾尔提安武器,Artian零件刷取,怪物猎人Wilds高级武器合成,Artian强化神卷">
+<link rel="canonical" href="https://relictrek.com/zh/games/mhwilds/artian-weapons-crafting">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/games/mhwilds/artian-weapons-crafting">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/games/mhwilds/artian-weapons-crafting">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/games/mhwilds/artian-weapons-crafting">
+<meta property="og:title" content="Artian 武器合成全攻略——零件、属性与刷取路线 | MH Wilds">
+<meta property="og:description" content="解锁条件、14种武器零件配方、R8刷取目标、属性系统与强化神卷策略。怪物猎人 Wilds Artian 武器完整指南。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/zh/games/mhwilds/artian-weapons-crafting">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px;font-size:16px}
+body{font-size:0.875rem;font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.57;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+.page-header{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:2.5rem 2rem 0}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.25rem}.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-header{margin-bottom:2rem}.tags{display:flex;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap}
+.tag{padding:.25rem .7rem;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border-radius:3px}
+.tag-armor{background:rgba(245,185,69,.12);color:var(--gold);border:1px solid rgba(245,185,69,.2)}
+.tag-weapon{background:rgba(168,85,247,.12);color:#a855f7;border:1px solid rgba(168,85,247,.2)}
+.tag-endgame{background:rgba(232,93,4,.1);color:var(--red);border:1px solid rgba(232,93,4,.2)}
+.tag-melee{background:rgba(42,157,143,.12);color:var(--teal);border:1px solid rgba(42,157,143,.2)}
+.article-header h1{font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:.75rem;text-shadow:0 0 20px rgba(245,185,69,.25)}
+.article-meta{display:flex;gap:1.5rem;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.quick-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:2.5rem}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;text-align:center;transition:border-color .2s,box-shadow .2s}
+.stat-card:hover{border-color:var(--border-gold);box-shadow:0 0 20px var(--gold-glow)}
+.stat-card .stat-value{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);line-height:1.2}
+.stat-card .stat-label{font-size:.72rem;color:var(--muted);margin-top:.35rem;text-transform:uppercase;letter-spacing:.04em}
+.main-layout{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:1fr 300px;gap:2.5rem}
+.main-content{min-width:0}.sidebar{position:sticky;top:84px;align-self:start}
+section{margin-bottom:2.5rem}
+section h2{font-family:var(--font-heading),'Rajdhani',sans-serif;font-size:1.35rem;font-weight:600;color:var(--gold);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+section h3{font-size:1.05rem;font-weight:600;color:var(--text);margin:1.25rem 0 .6rem}
+section p{margin-bottom:.85rem;color:var(--text-dim);font-size:.92rem}
+section ul,section ol{margin:.6rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.92rem}section li{margin-bottom:.35rem}
+.material-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s}
+.material-card:hover{border-color:var(--border-gold)}.material-card .mat-name{font-weight:600;font-size:1rem;color:var(--text);margin-bottom:.35rem}
+.material-card .mat-meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.82rem;margin-top:.6rem}
+.mat-meta-item{display:flex;align-items:center;gap:.35rem}.mat-meta-item.danger{color:var(--red)}.mat-meta-item.bonus{color:var(--teal)}.mat-meta-item.info{color:var(--info)}
+.danger-box,.bonus-box{padding:1rem 1.25rem;border-radius:8px;margin-bottom:.85rem;font-size:.9rem}
+.danger-box{background:rgba(232,93,4,.08);border-left:3px solid var(--red)}.danger-box .box-label{font-weight:600;color:var(--red);margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.bonus-box{background:rgba(42,157,143,.08);border-left:3px solid var(--teal)}.bonus-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin-bottom:.85rem;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.route-timeline{position:relative;padding-left:2rem;margin:1rem 0}
+.route-timeline::before{content:'';position:absolute;left:.5rem;top:.5rem;bottom:.5rem;width:1px;background:var(--border-gold)}
+.route-step{position:relative;margin-bottom:1.1rem;font-size:.9rem;color:var(--text-dim)}
+.route-step::before{content:'';position:absolute;left:-1.63rem;top:.35rem;width:10px;height:10px;border-radius:50%;background:var(--bg-card);border:2px solid var(--gold)}
+.route-step .step-num{font-weight:600;color:var(--gold);margin-right:.4rem}
+table.mat-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.mat-table th{font-family:var(--font-ui);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border)}
+.mat-table td{padding:.6rem .75rem;border-bottom:1px solid var(--border);color:var(--text-dim)}
+.mat-table td:first-child{color:var(--text);font-weight:500}
+.highlight-row td{background:rgba(245,185,69,.04)}
+.sidebar-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1.25rem}
+.sidebar-card h4{font-family:var(--font-heading);font-size:.85rem;font-weight:600;color:var(--gold);margin-bottom:1rem;letter-spacing:.03em}
+.sidebar-card ul{list-style:none;font-size:.85rem}.sidebar-card li{margin-bottom:.55rem}.sidebar-card a{color:var(--text-dim);font-size:.85rem}.sidebar-card a:hover{color:var(--gold)}
+.ad-placeholder{background:var(--bg-elevated);border:1px dashed var(--border);border-radius:8px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.faq-item{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.faq-q{padding:1rem 1.25rem;font-weight:600;font-size:.9rem;color:var(--text);cursor:pointer;background:var(--bg-card)}
+.faq-a{padding:.75rem 1.25rem 1rem;font-size:.88rem;color:var(--text-dim);border-top:1px solid var(--border)}
+.sources-section{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--border)}
+.sources-section h2{font-family:var(--font-heading);font-size:1rem;color:var(--muted);margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase}
+.sources-list{list-style:none;margin:0;padding:0}
+.sources-list li{font-size:.8rem;margin-bottom:.35rem}
+.sources-list a{color:var(--info);word-break:break-all}
+.sources-list a:hover{color:var(--gold)}
+.sources-note{font-size:.75rem;color:var(--muted);margin-top:.75rem}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:3rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--font-heading);font-size:.8rem;font-weight:600;color:var(--gold);margin-bottom:.85rem;text-transform:uppercase;letter-spacing:.06em}
+footer ul{list-style:none}footer li{margin-bottom:.45rem}footer a,footer p{font-size:.82rem;color:var(--muted)}footer a:hover{color:var(--gold)}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--muted);text-align:center}
+@media(max-width:900px){.main-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.quick-stats{grid-template-columns:repeat(2,1fr)}nav .nav-links{display:none}.article-header h1{font-size:1.5rem}}
+@media(max-width:600px){.quick-stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}nav{padding:0 1rem}.main-layout{padding:0 1rem 2rem}.page-header{padding:2rem 1rem 0}}
+body{font-size:0.875rem;line-height:1.57}
+h1{font-size:1.80em;line-height:1.30}h2{font-size:1.40em;line-height:1.30}h3{font-size:1.17em;line-height:1.60}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/zh/" class="logo"><span>🧭</span>RelicTrek</a>
+  <ul class="nav-links">
+    <li><a href="/zh/games/">游戏</a></li>
+    <li><a href="/zh/games/mhwilds/">MH Wilds</a></li>
+    <li><a href="/zh/blog/">博客</a></li>
+    <li><a href="/zh/about">关于</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="/en/games/mhwilds/artian-weapons-crafting">EN</a>
+      <a href="/zh/games/mhwilds/artian-weapons-crafting" class="active">中文</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="/zh/">首页</a> &rsaquo; <a href="/zh/games/">游戏</a> &rsaquo;
+    <a href="/zh/games/mhwilds/">怪物猎人 Wilds</a> &rsaquo;
+    <span>Artian 武器合成攻略</span>
+  </div>
+  <div class="article-header">
+    <div class="tags">
+      <span class="tag tag-weapon">武器</span>
+      <span class="tag tag-endgame">后期内容</span>
+      <span class="tag tag-armor">稀有度 8</span>
+      <span class="tag tag-melee">刷取路线</span>
+    </div>
+    <h1>Artian 武器合成全攻略——零件配方、属性选择与 R8 刷取路线</h1>
+    <div class="article-meta">
+      <span>🕐 刷取时间：2–4小时</span>
+      <span>⚔️ 每件武器需要3个零件</span>
+      <span>📍 来源：讨伐彩虹怪物</span>
+      <span>🎯 目标稀有度：仅限 R8</span>
+      <span>📅 更新：2026-06-29</span>
+    </div>
+  </div>
+  <div class="quick-stats">
+    <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">零件数/武器</div></div>
+    <div class="stat-card"><div class="stat-value">R8</div><div class="stat-label">目标稀有度</div></div>
+    <div class="stat-card"><div class="stat-value">14</div><div class="stat-label">武器种类</div></div>
+    <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">强化槽位数</div></div>
+    <div class="stat-card"><div class="stat-value">HR 41+</div><div class="stat-label">所需等级</div></div>
+  </div>
+</div>
+
+<div class="main-layout">
+<div class="main-content">
+
+<!-- 第1节：快速结论 -->
+<section id="quick-answer">
+  <h2>1. 快速结论</h2>
+  <p>Artian 武器是《怪物猎人 Wilds》的顶级后期武器，通过组合三个 Artian 零件合成——零件类型分为刀刃（Blade）、圆盘（Disc）、管件（Tube）、装置（Device）四种，均从讨伐彩虹怪物中获取。每种武器类型需要固定的零件组合。合成武器的属性由三个零件中占多数的属性决定。武器合成后还可进行最多五次强化，叠加攻击力、会心率、锋利度或属性加成。</p>
+  <p>后期实战中只有稀有度 8 的零件有价值。R8 零件来自6星和7星彩虹怪物，包括黑蚀龙（Gore Magala）和狩龙（Arkveld）。效率最高的刷取方式是挑战同时包含两只彩虹怪物的调查任务——携带副目标时单次任务最多可获得20件零件。</p>
+</section>
+
+<!-- 第2节：解锁条件 -->
+<section id="requirements">
+  <h2>2. 解锁条件</h2>
+  <div class="material-card">
+    <div class="mat-name">任务：蜿龙的火花与玫瑰的荆棘（Wyvern Sparks and Rose Thorns）</div>
+    <p style="font-size:.88rem;color:var(--text-dim);margin-top:.5rem">完成第四章主线任务，需要讨伐守护蓄电飞雷龙（Guardian Fulgur Anjanath）与彩虹拉·巴利纳（Tempered Lala Barina）。任务完成后获得<strong>损伤的武器碎片（Damaged Weapon Shard）</strong>，在铁匠处解锁 Artian 一级武器合成。</p>
+    <div class="mat-meta">
+      <span class="mat-meta-item info">📋 第四章主线任务</span>
+      <span class="mat-meta-item bonus">🎁 奖励：损伤的武器碎片</span>
+      <span class="mat-meta-item info">🏹 解锁：铁匠处 Artian I 级合成</span>
+    </div>
+  </div>
+  <div class="note-box">
+    <div class="box-label">关于稀有度 8 零件</div>
+    需要达到 <strong>HR 41+</strong> 才会遇到6星和7星彩虹怪物。熔合壶备选路线需要 <strong>HR 100</strong>。
+  </div>
+</section>
+
+<!-- 第3节：刷取地点 -->
+<section id="farming-route">
+  <h2>3. 零件获取地点</h2>
+  <h3>主要路线——彩虹怪物调查任务</h3>
+  <p>Artian 零件作为奖励在高位调查任务讨伐彩虹怪物后获得。零件稀有度与怪物星级挂钩：6星和7星彩虹怪物是 R8 零件的唯一来源，也是后期刷取的核心目标。</p>
+
+  <h3>R8 目标怪物（6★ 和 7★ 彩虹怪物）</h3>
+  <table class="mat-table">
+    <thead><tr><th>怪物名称</th><th>星级</th><th>零件稀有度</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr class="highlight-row"><td>黑蚀龙 Gore Magala</td><td>6★ 彩虹</td><td>R8</td><td>最佳与狩龙组合调查</td></tr>
+      <tr class="highlight-row"><td>狩龙 Arkveld</td><td>7★ 彩虹</td><td>R8</td><td>最高星级掉落；核心刷取目标</td></tr>
+      <tr><td>海皇龙 Uth Duna</td><td>6★ 彩虹</td><td>R8</td><td>R8 备选来源</td></tr>
+      <tr><td>金火龙 Jin Dahaad</td><td>6★ 彩虹</td><td>R8</td><td>R8 备选来源</td></tr>
+      <tr><td>雷牙龙 Rey Dau</td><td>6★ 彩虹</td><td>R8</td><td>R8 备选来源</td></tr>
+      <tr><td>黑狱龙 Nu Udra</td><td>6★ 彩虹</td><td>R8</td><td>R8 备选来源</td></tr>
+    </tbody>
+  </table>
+
+  <h3>最高效率——顶级彩虹怪物调查任务</h3>
+  <p>5星顶级彩虹怪物调查任务是材料获取效率最高的选项。难度高于普通彩虹怪物，但单次任务掉落零件更多。当同一调查任务中存在副目标彩虹怪物时，单次任务最多可获得 20 件零件。</p>
+
+  <div class="bonus-box">
+    <div class="box-label">最佳调查任务搭配</div>
+    寻找同时包含黑蚀龙（Gore Magala）和狩龙（Arkveld）的调查任务。两只高星彩虹目标在同一任务中，是社区公认的 R8 刷取效率最高的路线组合。
+  </div>
+
+  <h3>备选路线——熔合壶（HR 100+）</h3>
+  <p>达到 HR 100 后，苏嘉村（Suja Village）的熔合壶解锁「熔合遗物」选项，可以用 <strong>120 熔合点数</strong>直接合成任意指定 R8 Artian 零件。适合已经知道需要哪种零件、不想依赖随机掉落的猎人。</p>
+</section>
+
+<!-- 第4节：逐步操作 -->
+<section id="step-by-step">
+  <h2>4. 合成步骤详解</h2>
+  <div class="route-timeline">
+    <div class="route-step"><span class="step-num">1.</span> 完成第四章主线任务「蜿龙的火花与玫瑰的荆棘」，解锁 Artian 合成功能，收取损伤的武器碎片奖励。</div>
+    <div class="route-step"><span class="step-num">2.</span> 确认你的目标武器种类，在第6节表格中查找所需零件组合。例如太刀（Long Sword）需要 1个刀刃 + 2个管件。</div>
+    <div class="route-step"><span class="step-num">3.</span> 决定目标属性（火、雷、水、冰、龙）或选择无属性（物理流）。三个零件都选同一属性可获得最强属性加成；无属性流则零件属性无所谓，随意搭配即可。</div>
+    <div class="route-step"><span class="step-num">4.</span> 运行彩虹怪物调查任务，优先选择黑蚀龙+狩龙双目标任务，持续收集直到凑够所需的3件 R8 零件。</div>
+    <div class="route-step"><span class="step-num">5.</span> 前往铁匠（杰玛/Gemma）→ 锻造装备 → Artian 武器。选择三件零件完成合成，无需额外材料，即时完成。</div>
+    <div class="route-step"><span class="step-num">6.</span> 强化前先测试随机种子：合成一件任意类型的便宜 Artian 武器（R6或R7均可）→ 查看其5个强化槽将获得的加成 → 若模式理想则继续强化正式武器；若模式不好则不保存直接退出游戏重置种子（详见第7节）。</div>
+    <div class="route-step"><span class="step-num">7.</span> 从永锻炉（Everforge）铸造炉的节日奖励中收集强化材料：Drearisite、Specklite、Argecite、Oricalcite，可向 Roqul 领取或在营地向 Nata 收取。</div>
+    <div class="route-step"><span class="step-num">8.</span> 在杰玛处选择「强化/分解 Artian 武器」→「强化」，进行5次强化。每次强化为武器添加一个属性加成（攻击/会心/锋利度/属性/防御）。</div>
+  </div>
+</section>
+
+<!-- 第5节：注意事项 -->
+<section id="warnings">
+  <h2>5. 注意事项</h2>
+  <div class="danger-box">
+    <div class="box-label">无不可挽回的错误——但强化材料有限</div>
+    Artian 武器没有限时或可错过的解锁条件。但强化材料来自节日奖励，刷新有固定周期——如果在坏种子上浪费材料，需要等到下一次节日周期才能补充。
+  </div>
+  <div class="danger-box">
+    <div class="box-label">不要在确认种子之前贸然强化</div>
+    游戏使用固定种子系统分配强化加成。同一游戏存档周期内，种子不会因为换武器而改变。如果你强化一把武器得到5个防御加成，同一周期内下一把武器也会出现同样的差结果。务必先用废品武器测试种子，确认加成模式合适后再强化目标武器。
+  </div>
+  <div class="note-box">
+    <div class="box-label">R6 和 R7 零件不值得后期刷</div>
+    R6 和 R7 Artian 武器基础攻击力更低、装饰珠槽更少，且没有白色锋利度。只在测试种子时用来做「废品武器」，不要把它们当作正式培养方向。
+  </div>
+</section>
+
+<!-- 第6节：数据与表格 -->
+<section id="stats">
+  <h2>6. 全14种武器零件配方表</h2>
+  <p>每种武器类型需要固定的3件 Artian 零件组合。来源：Fextralife Wiki / Mobalytics / Backdash。</p>
+  <table class="mat-table">
+    <thead><tr><th>武器类型</th><th>零件1</th><th>零件2</th><th>零件3</th></tr></thead>
+    <tbody>
+      <tr><td>大剑 Great Sword</td><td>刀刃 Blade</td><td>刀刃 Blade</td><td>管件 Tube</td></tr>
+      <tr><td>太刀 Long Sword</td><td>刀刃 Blade</td><td>管件 Tube</td><td>管件 Tube</td></tr>
+      <tr><td>单手剑 Sword &amp; Shield</td><td>刀刃 Blade</td><td>管件 Tube</td><td>圆盘 Disc</td></tr>
+      <tr><td>双剑 Dual Blades</td><td>刀刃 Blade</td><td>刀刃 Blade</td><td>圆盘 Disc</td></tr>
+      <tr><td>大锤 Hammer</td><td>圆盘 Disc</td><td>圆盘 Disc</td><td>管件 Tube</td></tr>
+      <tr><td>狩猎笛 Hunting Horn</td><td>圆盘 Disc</td><td>装置 Device</td><td>装置 Device</td></tr>
+      <tr><td>长枪 Lance</td><td>刀刃 Blade</td><td>圆盘 Disc</td><td>圆盘 Disc</td></tr>
+      <tr><td>铳枪 Gunlance</td><td>圆盘 Disc</td><td>圆盘 Disc</td><td>装置 Device</td></tr>
+      <tr><td>斩击斧 Switch Axe</td><td>刀刃 Blade</td><td>刀刃 Blade</td><td>装置 Device</td></tr>
+      <tr><td>充能斧 Charge Blade</td><td>刀刃 Blade</td><td>圆盘 Disc</td><td>装置 Device</td></tr>
+      <tr><td>操虫棍 Insect Glaive</td><td>刀刃 Blade</td><td>管件 Tube</td><td>装置 Device</td></tr>
+      <tr><td>轻弩 Light Bowgun</td><td>管件 Tube</td><td>装置 Device</td><td>装置 Device</td></tr>
+      <tr><td>重弩 Heavy Bowgun</td><td>圆盘 Disc</td><td>管件 Tube</td><td>装置 Device</td></tr>
+      <tr><td>弓 Bow</td><td>管件 Tube</td><td>管件 Tube</td><td>装置 Device</td></tr>
+    </tbody>
+  </table>
+
+  <h3>属性系统</h3>
+  <table class="mat-table">
+    <thead><tr><th>零件属性组合</th><th>合成武器属性</th><th>强度</th></tr></thead>
+    <tbody>
+      <tr class="highlight-row"><td>3件相同属性</td><td>该属性</td><td>最强属性伤害</td></tr>
+      <tr><td>2件相同属性 + 1件不同属性</td><td>占多数的属性</td><td>属性伤害较弱</td></tr>
+      <tr><td>3件各不同属性</td><td>无属性（物理）</td><td>无属性，纯物理输出</td></tr>
+    </tbody>
+  </table>
+
+  <h3>强化加成类型</h3>
+  <table class="mat-table">
+    <thead><tr><th>加成类型</th><th>每槽数值</th><th>适用武器</th></tr></thead>
+    <tbody>
+      <tr class="highlight-row"><td>攻击 Attack</td><td>+5 物理攻击</td><td>全部武器</td></tr>
+      <tr class="highlight-row"><td>会心 Affinity</td><td>+5% 会心率</td><td>全部武器</td></tr>
+      <tr><td>锋利 Sharpness</td><td>+30 锋利度</td><td>仅近战武器</td></tr>
+      <tr><td>属性 Element</td><td>属性/状态强化</td><td>除弩以外所有武器</td></tr>
+      <tr><td>防御 Defense</td><td>防御强化</td><td>全部武器</td></tr>
+    </tbody>
+  </table>
+
+  <h3>各流派神卷目标</h3>
+  <table class="mat-table">
+    <thead><tr><th>流派</th><th>代表武器</th><th>理想5槽模式</th></tr></thead>
+    <tbody>
+      <tr class="highlight-row"><td>物理伤害流</td><td>大剑、大锤、太刀</td><td>5× 攻击（+25物理）</td></tr>
+      <tr><td>会心输出流</td><td>双剑、操虫棍</td><td>3× 攻击 + 2× 会心</td></tr>
+      <tr><td>属性攻击流</td><td>弓、双剑（属性）</td><td>2–3× 属性 + 2× 攻击</td></tr>
+      <tr><td>均衡通用型</td><td>多数武器种类</td><td>3× 攻击 + 1× 会心 + 1× 锋利</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem">注：会心槽的性价比最低。弱点特效、激昂等技能已能提供大量会心率，过多叠加会心加成容易溢出，回报递减明显。</p>
+</section>
+
+<!-- 第7节：常见错误 -->
+<section id="mistakes">
+  <h2>7. 常见错误</h2>
+  <div class="material-card">
+    <div class="mat-name">用 R6/R7 零件制作后期武器</div>
+    <p style="font-size:.88rem;color:var(--text-dim);margin-top:.4rem">R6 和 R7 Artian 武器在后期对局中表现明显落后——基础攻击力偏低、装饰珠槽更少、无白色锋利度。从一开始就应直接目标6星和7星彩虹怪物，获取 R8 零件。</p>
+  </div>
+  <div class="material-card">
+    <div class="mat-name">制作属性武器时混用不同属性零件</div>
+    <p style="font-size:.88rem;color:var(--text-dim);margin-top:.4rem">使用一件火属性、一件雷属性、一件水属性零件，最终武器将没有任何属性。要最大化属性伤害，必须使用3件相同属性的零件。最少也需要3件中有2件是目标属性。</p>
+  </div>
+  <div class="material-card">
+    <div class="mat-name">不测种子就直接强化</div>
+    <p style="font-size:.88rem;color:var(--text-dim);margin-top:.4rem">游戏通过固定种子分配强化加成，当前存档周期内种子不会随武器更换而改变。先合成一把便宜的 R6 或 R7 废品武器，查看强化预览，只有在加成模式满意的情况下才对 R8 正式武器进行强化。模式不好则不保存退出，重置种子。</p>
+  </div>
+  <div class="material-card">
+    <div class="mat-name">忽略调查任务奖励槽等级</div>
+    <p style="font-size:.88rem;color:var(--text-dim);margin-out:.4rem">调查任务有铜、银、金三种奖励槽，金槽掉落 R8 Artian 零件的概率最高。接受任务前务必检查奖励槽配置——三金槽调查任务的刷取效率远超三铜槽任务。</p>
+  </div>
+</section>
+
+<!-- 第8节：相关攻略 -->
+<section id="related">
+  <h2>8. 相关攻略</h2>
+  <ul>
+    <li><a href="/zh/games/mhwilds/artian-set">Artian 防具套装——完整解锁与合成指南</a></li>
+    <li><a href="/zh/games/mhwilds/">怪物猎人 Wilds 全部攻略</a></li>
+  </ul>
+</section>
+
+<!-- 第9节：常见问题 -->
+<section id="faq">
+  <h2>9. 常见问题</h2>
+  <div class="faq-item">
+    <div class="faq-q">怎么解锁《怪物猎人 Wilds》的 Artian 武器？</div>
+    <div class="faq-a">完成第四章主线任务「蜿龙的火花与玫瑰的荆棘」，讨伐守护蓄电飞雷龙和彩虹拉·巴利纳，获得「损伤的武器碎片」奖励后，在铁匠处即可解锁 Artian 武器合成。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">哪些彩虹怪物掉落 R8 Artian 零件？</div>
+    <div class="faq-a">R8 零件来自6星和7星彩虹怪物：黑蚀龙（Gore Magala）、狩龙（Arkveld）、海皇龙（Uth Duna）、金火龙（Jin Dahaad）、雷牙龙（Rey Dau）、黑狱龙（Nu Udra）。狩龙星级最高，是高效 R8 刷取的核心目标。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Artian 武器的属性可以自由选择吗？</div>
+    <div class="faq-a">可以。合成武器的属性由3件零件中占多数的属性决定。用3件相同属性零件可获得最强属性伤害。想要无属性物理武器，零件属性无所谓，随意搭配即可。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Artian 武器的强化神卷目标是什么？</div>
+    <div class="faq-a">物理伤害流（大剑、大锤、太刀）的天花板是5× 攻击（+25物理）。会心流理想目标是3× 攻击 + 2× 会心。属性流建议2–3× 属性 + 2× 攻击。通用均衡型「3× 攻击 + 1× 会心 + 1× 锋利」普遍认为足够实用，且远比追求完美5× 攻击更容易实现。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">种子系统是什么，怎么用它钓好卷？</div>
+    <div class="faq-a">游戏在当前存档周期内使用固定种子分配强化加成。先合成一把便宜的废品 Artian 武器（R6/R7均可），查看其强化预览——这就是你下一把武器将要获得的加成。如果模式不好，不保存退出到主菜单重置种子；如果模式理想，再对 R8 正式武器进行强化。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">除了刷彩虹怪物，还有其他获取 Artian 零件的方法吗？</div>
+    <div class="faq-a">有。达到 HR 100 后，苏嘉村熔合壶解锁「熔合遗物」选项，消耗120熔合点数可直接合成任意指定 R8 Artian 零件。彻底消除 RNG，但需要大量熔合点数投入。</div>
+  </div>
+</section>
+
+</div><!-- end main-content -->
+
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h4>MH Wilds 攻略</h4>
+    <ul>
+      <li><a href="/zh/games/mhwilds/artian-set">Artian 防具套装</a></li>
+      <li><a href="/zh/games/mhwilds/">全部 MH Wilds 攻略 →</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-card">
+    <h4>速查参考</h4>
+    <ul>
+      <li>解锁：第四章主线</li>
+      <li>R8 来源：6★–7★ 彩虹怪物</li>
+      <li>最佳目标：黑蚀龙 + 狩龙</li>
+      <li>备选：熔合壶（HR 100）</li>
+      <li>强化槽：每件武器5个</li>
+    </ul>
+  </div>
+  <div class="ad-placeholder">广告位</div>
+</aside>
+</div><!-- end main-layout -->
+
+<div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem">
+<section class="sources-section">
+  <h2>参考来源</h2>
+  <ul class="sources-list">
+    <li><a href="https://monsterhunterwilds.wiki.fextralife.com/Artian_Weapons" target="_blank" rel="noopener noreferrer">Artian Weapons — Monster Hunter Wilds Wiki (Fextralife)</a></li>
+    <li><a href="https://game8.co/games/Monster-Hunter-Wilds/archives/503103" target="_blank" rel="noopener noreferrer">Artian Weapons Guide — Game8</a></li>
+    <li><a href="https://game8.co/games/Monster-Hunter-Wilds/archives/503375" target="_blank" rel="noopener noreferrer">Best Ways to Farm Rarity 8 Artian Parts — Game8</a></li>
+    <li><a href="https://mobalytics.gg/mhw/guides/artian-weapons-guide" target="_blank" rel="noopener noreferrer">Artian Weapons Guide: God Rolls, Forge, and Reinforce — Mobalytics</a></li>
+    <li><a href="https://www.gamerbraves.com/guide-artian-weapons-in-monster-hunter-wilds-from-unlocking-to-endgame-optimization/" target="_blank" rel="noopener noreferrer">Artian Weapons: From Unlocking to Endgame — GamerBraves</a></li>
+    <li><a href="https://thebackdash.com/gaming/monster-hunter-wilds-complete-artian-system-guide/" target="_blank" rel="noopener noreferrer">Complete Artian System Guide — Backdash</a></li>
+    <li><a href="https://www.switchbladegaming.com/monster-hunter-wilds/weapon-augment-guide/" target="_blank" rel="noopener noreferrer">Artian Reinforcement Seed &amp; God-Roll Odds — Switchblade Gaming</a></li>
+    <li><a href="https://www.rpgsite.net/guide/16920-monster-hunter-wilds-endgame-explained-artian-weapons-upgrade-tempered-monsters-investigations-decorations" target="_blank" rel="noopener noreferrer">MH Wilds Endgame Explained — RPG Site</a></li>
+  </ul>
+  <p class="sources-note">本页内容均来自以上链接来源。尚未经外部来源核实的内容已标注「待确认」。</p>
+</section>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>RelicTrek</h4>
+      <p>专注于各大游戏中隐藏道具、稀有武器与不可错过内容的攻略指南。</p>
+    </div>
+    <div>
+      <h4>怪物猎人 Wilds</h4>
+      <ul>
+        <li><a href="/zh/games/mhwilds/artian-set">Artian 防具套装</a></li>
+        <li><a href="/zh/games/mhwilds/">全部 MH Wilds 攻略</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>其他游戏</h4>
+      <ul>
+        <li><a href="/zh/games/tw3/">巫师3</a></li>
+        <li><a href="/zh/games/lop/">匹诺曹的谎言</a></li>
+        <li><a href="/zh/games/coe33/">绝境远征 33</a></li>
+        <li><a href="/zh/games/er/">艾尔登法环</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>网站</h4>
+      <ul>
+        <li><a href="/zh/about">关于</a></li>
+        <li><a href="/zh/privacy">隐私政策</a></li>
+        <li><a href="/zh/contact">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 RelicTrek. 保留所有权利。</div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "怎么解锁怪物猎人Wilds的Artian武器？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完成第四章主线任务「蜿龙的火花与玫瑰的荆棘」，讨伐守护蓄电飞雷龙和彩虹拉·巴利纳，获得损伤的武器碎片后在铁匠处解锁Artian合成。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些彩虹怪物掉落R8 Artian零件？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "R8零件来自6星和7星彩虹怪物：黑蚀龙（Gore Magala）、狩龙（Arkveld）、海皇龙（Uth Duna）、金火龙（Jin Dahaad）、雷牙龙（Rey Dau）、黑狱龙（Nu Udra）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Artian武器的属性如何确定？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "武器属性由3件零件中占多数的属性决定。3件相同属性可获得最强属性加成。想要无属性武器则零件属性无所谓。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Artian武器强化神卷应该追求什么目标？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "物理伤害流（大剑、大锤、太刀）天花板是5×攻击（+25物理）。会心流目标3×攻击+2×会心。属性流建议2-3×属性+2×攻击。均衡型3×攻击+1×会心+1×锋利在大多数情况下足够实用。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
