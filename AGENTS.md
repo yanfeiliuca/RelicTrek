@@ -36,5 +36,15 @@ Recent commits use concise imperative summaries, such as `Fix TW3 Manticore gear
 
 5. **Early Access caveat.** For Early Access games (e.g., Windrose), all numerical values and route details must be marked 待确认 unless confirmed by a source dated after the most recent patch.
 
+6. **Pre-push validator must pass.** Before any `git commit` on blog HTML files, run:
+   ```
+   python3 validate-blog-sources.py <en-file> <zh-file>
+   ```
+   The validator is also wired into `git-push-edit.ps1` and `git-push-blog.ps1` and will block the commit automatically if the file fails. Checks performed:
+   - `<section class="sources-section">` present
+   - ≥ 2 real external URLs inside it (no `URL_1`, `#`, or `example.com` placeholders)
+   - No draft `[Source: URL]` markers left in body text
+   Exit 0 = safe to push. Exit 1 = blocked; fix first.
+
 ## Security & Configuration Tips
 Do not commit secrets, analytics credentials beyond existing public IDs, or private research notes from `workdocs/`. Preserve existing Google Analytics and AdSense snippets unless the task explicitly requires changing them.

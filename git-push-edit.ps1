@@ -159,6 +159,26 @@ if ($Push -and -not $Commit) {
     Fail "-Push requires -Commit in this helper"
 }
 
+# ── Anti-Hallucination Gate ───────────────────────────────────────────────────
+# Validate every blog HTML file before it can be committed or pushed.
+# The validator only acts on en/blog/ and zh/blog/ paths; others are skipped.
+$blogFiles = $normalizedFiles | Where-Object { $_ -match "^(en|zh)/blog/.*\.html$" }
+if ($blogFiles.Count -gt 0) {
+    Write-Host ""
+    Write-Host "Anti-hallucination source check..." -ForegroundColor Cyan
+    $validatorArgs = @("validate-blog-sources.py") + $blogFiles
+    & python3 @validatorArgs
+    if ($LASTEXITCODE -ne 0) {
+        Fail (
+            "Anti-hallucination gate BLOCKED the commit.`n" +
+            "Blog file(s) are missing a valid <section class=`"sources-section`"> " +
+            "with >= 2 verified external source URLs.`n" +
+            "Correct the issues shown above, then re-run this script."
+        )
+    }
+}
+# ─────────────────────────────────────────────────────────────────────────────
+
 Write-Host ""
 Write-Host "Staging requested files only..." -ForegroundColor Cyan
 RunGit (@("add", "--") + $normalizedFiles)

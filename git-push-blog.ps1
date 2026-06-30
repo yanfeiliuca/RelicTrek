@@ -4,6 +4,28 @@ Set-Location $PSScriptRoot
 Remove-Item -Force ".git\index.lock" -ErrorAction SilentlyContinue
 Remove-Item -Force ".git\HEAD.lock"  -ErrorAction SilentlyContinue
 
+# ── Anti-Hallucination Gate ───────────────────────────────────────────────────
+# Collect modified/new blog HTML files and validate them before pushing.
+$pendingBlogFiles = & git diff --name-only HEAD -- "en/blog/*.html" "zh/blog/*.html"
+$untrackedBlogFiles = & git ls-files --others --exclude-standard -- "en/blog/*.html" "zh/blog/*.html"
+$allBlogFiles = @($pendingBlogFiles) + @($untrackedBlogFiles) | Where-Object { $_ -ne "" }
+
+if ($allBlogFiles.Count -gt 0) {
+    Write-Host "Anti-hallucination source check on blog files..." -ForegroundColor Cyan
+    $validatorArgs = @("validate-blog-sources.py") + $allBlogFiles
+    & python3 @validatorArgs
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host ""
+        Write-Host "ERROR: Anti-hallucination gate BLOCKED the push." -ForegroundColor Red
+        Write-Host "Fix the source issues shown above, then re-run this script." -ForegroundColor Red
+        Read-Host
+        exit 1
+    }
+} else {
+    Write-Host "No blog files detected — skipping source validation." -ForegroundColor Yellow
+}
+# ─────────────────────────────────────────────────────────────────────────────
+
 git add .
 git commit -m "auto-blog: 2026-06-03 [windrose] conquistador-armor"
 git push
