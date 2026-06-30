@@ -1,0 +1,46 @@
+{
+  "registry_version": "1.0.0",
+  "description": "女娲通用技能库注册表 — 记录所有已蒸馏的大师思维技能",
+  "last_updated": "2026-06-30",
+  "total_skills": 1,
+  "skills": [
+    {
+      "skill_id": "nuwa.entrepreneurship.yu-minhong",
+      "file": "yuminghong-entrepreneurship.json",
+      "name_zh": "俞敏洪逆境创业思维",
+      "name_en": "Yu Minhong Adversity-to-Opportunity Entrepreneurial Mind",
+      "domain": "entrepreneurship",
+      "version": "1.0.0",
+      "tags": ["逆境转化", "长期主义", "教育理念", "组织重建", "韧性领导"],
+      "pattern_count": 6,
+      "distilled_at": "2026-06-30"
+    }
+  ],
+  "domains": {
+    "entrepreneurship": ["nuwa.entrepreneurship.yu-minhong"],
+    "education": [],
+    "philosophy": [],
+    "leadership": [],
+    "creativity": [],
+    "science": [],
+    "arts": [],
+    "strategy": []
+  },
+  "planned_skills": [
+    {
+      "skill_id": "nuwa.philosophy.wang-yangming",
+      "name_zh": "王阳明知行合一思维",
+      "status": "planned"
+    },
+    {
+      "skill_id": "nuwa.entrepreneurship.ren-zhengfei",
+      "name_zh": "任正非极限挑战思维",
+      "status": "planned"
+    },
+    {
+      "skill_id": "nuwa.strategy.sun-tzu",
+      "name_zh": "孙子兵法战略思维",
+      "status": "planned"
+    }
+  ]
+}

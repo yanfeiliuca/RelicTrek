@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NuwaSkill",
+  "description": "女娲技能库 — 蒸馏自人类智慧大师的可调用思维技能规范 v1.0",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "version",
+    "meta",
+    "source",
+    "thinking_patterns",
+    "decision_framework",
+    "activation_triggers",
+    "application_scenarios"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "description": "全局唯一标识符，格式：nuwa.<domain>.<person-slug>",
+      "pattern": "^nuwa\\.[a-z]+\\.[a-z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "description": "语义版本号",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["name_zh", "name_en", "distilled_by", "distilled_at", "tags"],
+      "properties": {
+        "name_zh": { "type": "string" },
+        "name_en": { "type": "string" },
+        "distilled_by": { "type": "string", "description": "蒸馏者标识（AI agent名称）" },
+        "distilled_at": { "type": "string", "format": "date" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "domain": {
+          "type": "string",
+          "enum": ["entrepreneurship", "education", "philosophy", "leadership", "creativity", "science", "arts", "strategy"]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["person_zh", "person_en", "born", "known_for", "key_works"],
+      "properties": {
+        "person_zh": { "type": "string" },
+        "person_en": { "type": "string" },
+        "born": { "type": "string" },
+        "known_for": { "type": "array", "items": { "type": "string" } },
+        "key_works": { "type": "array", "items": { "type": "string" } },
+        "signature_quotes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "thinking_patterns": {
+      "type": "array",
+      "description": "提炼出的核心思维模式列表",
+      "items": {
+        "type": "object",
+        "required": ["id", "name_zh", "name_en", "description", "mechanism", "examples"],
+        "properties": {
+          "id": { "type": "string" },
+          "name_zh": { "type": "string" },
+          "name_en": { "type": "string" },
+          "description": { "type": "string" },
+          "mechanism": {
+            "type": "object",
+            "description": "该思维模式的运作机制",
+            "properties": {
+              "input": { "type": "string" },
+              "process": { "type": "array", "items": { "type": "string" } },
+              "output": { "type": "string" }
+            }
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "context": { "type": "string" },
+                "application": { "type": "string" },
+                "result": { "type": "string" }
+              }
+            }
+          },
+          "anti_patterns": {
+            "type": "array",
+            "description": "应避免的错误思维方式",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "decision_framework": {
+      "type": "object",
+      "description": "在面临决策时，按此人思维方式会经历的步骤",
+      "properties": {
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": { "type": "integer" },
+              "question": { "type": "string" },
+              "lens": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "activation_triggers": {
+      "type": "array",
+      "description": "AI调用此技能的触发条件关键词或场景描述",
+      "items": { "type": "string" }
+    },
+    "application_scenarios": {
+      "type": "array",
+      "description": "此技能最适合应用的场景",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scenario": { "type": "string" },
+          "recommended_patterns": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "description": "与其他技能的配合建议",
+      "properties": {
+        "synergizes_with": { "type": "array", "items": { "type": "string" } },
+        "conflicts_with": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
