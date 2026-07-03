@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steel Nails in Windrose: Source-Checked Repair Kit Notes — RelicTrek</title>
+<meta name="description" content="Source-checked Windrose Steel Nails notes: shipwreck and ship-loot sources, Combat Repair Kit recipe, Master kit caveats, and unverified route claims marked clearly.">
+<link rel="canonical" href="https://relictrek.com/en/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">
+<meta property="og:title" content="Steel Nails in Windrose: Source-Checked Repair Kit Notes — RelicTrek">
+<meta property="og:description" content="Source-checked Windrose Steel Nails notes: shipwreck and ship-loot sources, Combat Repair Kit recipe, Master kit caveats, and unverified route claims marked clearly.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/en/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:75px;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-meta{font-family:var(--font-ui);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+h1{font-family:var(--font-heading);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:1.5rem;text-shadow:0 0 20px rgba(245,185,69,.2)}
+h2{font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gold);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+h3{font-size:1rem;font-weight:600;color:var(--text);margin:1.25rem 0 .5rem}
+p{margin-bottom:.9rem;color:var(--text-dim);font-size:.93rem;line-height:1.75}
+ul,ol{margin:.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.93rem}
+li{margin-bottom:.35rem}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.note-box p{margin:0;color:var(--text-dim)}
+.tip-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(42,157,143,.07);border-left:3px solid var(--teal)}
+.tip-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.tip-box p{margin:0;color:var(--text-dim)}
+.guide-link{display:inline-block;margin-top:.5rem;padding:.4rem .9rem;border:1px solid var(--border-gold);border-radius:4px;font-family:var(--font-ui);font-size:.8rem;font-weight:500;color:var(--gold);letter-spacing:.04em;transition:background .2s}
+.guide-link:hover{background:var(--gold-glow)}
+.sources-section{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--border)}
+.sources-section h2{font-family:var(--font-heading);font-size:1rem;color:var(--muted);margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase}
+.sources-list{list-style:none;margin:0;padding:0}
+.sources-list li{font-size:.8rem;margin-bottom:.35rem}
+.sources-list a{color:var(--info);word-break:break-all}
+.sources-list a:hover{color:var(--gold)}
+.sources-note{font-size:.75rem;color:var(--muted);margin-top:.75rem}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:2.5rem 2rem 1.5rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--font-heading);font-size:1rem;color:var(--gold)}
+.footer-links{display:flex;gap:1.5rem;font-size:.8rem}
+.footer-links a{color:var(--muted)}.footer-links a:hover{color:var(--gold)}
+.footer-copy{width:100%;text-align:center;font-size:.75rem;color:var(--muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<nav>
+<a href="/en/" class="logo"><span>🗺</span>RelicTrek</a>
+<ul class="nav-links">
+<li><a href="/en/">Home</a></li>
+<li><a href="/en/games/">Games</a></li>
+<li><a href="/en/blog/" class="active">Blog</a></li>
+<li><a href="/en/about">About</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang-switch">
+<a href="/en/blog/2026-06-29-windrose-steel-nails-combat-repair-kit" class="active">EN</a>
+<a href="/zh/blog/2026-06-29-windrose-steel-nails-combat-repair-kit">中文</a>
+</div>
+</div>
+</nav>
+<main>
+<div class="breadcrumb">
+<a href="/en/">Home</a> › <a href="/en/blog/">Blog</a> › <span>Steel Nails in Windrose</span>
+</div>
+<div class="article-meta">Windrose · 2026-06-29</div>
+<h1>Steel Nails in Windrose: Source-Checked Repair Kit Notes</h1>
+
+<p>Steel Nails are a rare, item-level 2 Windrose resource tied to ship repair crafting, especially the Combat Repair Kit and Master Combat Repair Kit lines. The Games Wiki lists Steel Nails as a resource obtained from other ships, wreckage, and the Brethren of the Coast Provisioner; it also lists Combat Repair Kit and Master Combat Repair Kit as crafting uses.</p>
+
+<p>Treat this page as an Early Access source-check, not a final farming route. Current public sources support shipwreck salvage, ship loot, vendor purchase, and repair-kit recipes; they do not fully verify exact island-by-island routes, fixed yields, or a guaranteed first-island stockpile. Those route details remain 待确认.</p>
+
+<h2>What the Sources Support</h2>
+
+<p>The safest wording is that Steel Nails can be seized from ships or salvaged from wreckage. The Games Wiki also says shoreline shipwreck debris can produce planks and Steel Nails, and that cleared debris does not regenerate. Dexerto's Windrose wiki entry independently frames Steel Nails as a rare resource used in ship repair and obtainable through listed resource channels, but it is not enough by itself to prove exact route timing.</p>
+
+<p>The vendor fallback is clearer: The Games Wiki lists the Brethren of the Coast Provisioner as a Steel Nails seller at 10 Piastres. That supports using the vendor as a backup source, but it does not prove stock size, restock cadence, or whether buying is efficient for a specific build.</p>
+
+<div class="tip-box">
+<div class="box-label">Source Boundary</div>
+<p>Do not merge ordinary Nails with Steel Nails. The Games Wiki distinguishes Steel Nails from the generic Nails made at a Workbench, so ordinary-Nails farming notes should not be copied into this Steel Nails route without a separate source.</p>
+</div>
+
+<h2>Combat Repair Kit Relationship</h2>
+
+<p>The basic Combat Repair Kit recipe is well supported by two independent sources: 5 Wooden Planks, 1 Steel Nail, and 1 Rum Bottle. FinalBoss says the kit restores about 30% of ship health over 10 seconds, while The Games Wiki lists the same ingredient line and frames the kit as on-water ship maintenance.</p>
+
+<p>FinalBoss describes Wharf repair as the cheaper normal repair method and Combat Repair Kits as a mid-fight option. Its timing advice is to create distance before using the kit, because taking fire during the repair window reduces the value of the heal.</p>
+
+<h2>Master Combat Repair Kit Caveat</h2>
+
+<p>GAMES.GG says the Master Combat Repair Kit restores 60% of maximum ship health over 10 seconds and can appear in Decrepit Chests along Foothills coastlines. It also says Steel Nails come from Blackbeard Crew Chests and shipwrecks for the crafted Master kit path. Because this is still Early Access guide data, exact chest odds and route efficiency should stay 待确认 until checked in the current game build.</p>
+
+<div class="note-box">
+<div class="box-label">Recipe Reference</div>
+<p>Supported: Combat Repair Kit = 5 Wooden Planks + 1 Steel Nail + 1 Rum Bottle; about 30% ship-health recovery over 10 seconds. Supported by GAMES.GG but still route-sensitive: Master Combat Repair Kit = 60% over 10 seconds, with Decrepit Chest / shipwreck / Blackbeard Crew Chest source notes.</p>
+</div>
+
+<h2>What Still Needs Verification</h2>
+
+<p>The current source set does not include an official item database, an official patch note, or a strong Reddit/forum confirmation for Steel Nails. It also does not prove exact per-wreck yields, a guaranteed starting-island loop, vendor restock quantity, or whether all shoreline wreckage behaves the same after the latest patch. Keep those details out of production copy unless a current source is added.</p>
+
+<p>Practical takeaway: collect Steel Nails when wreckage, ship loot, chests, or the Brethren of the Coast Provisioner make them available, reserve them for repair-kit crafting, and use Combat Repair Kits when you cannot safely return to a Wharf. More aggressive claims, such as "fastest route," "best opening sequence," or fixed chest odds, remain 待确认.</p>
+
+<a href="/en/games/windrose/guides/steel-nails-combat-repair-kit" class="guide-link">→ Full Steel Nails & Combat Repair Kit Guide</a>
+
+<section class="sources-section">
+<h2>Sources</h2>
+<ul class="sources-list">
+<li><a href="https://thegameswiki.com/windrose/wiki/steel-nails" target="_blank" rel="noopener noreferrer">Steel Nails — The Games Wiki (Windrose)</a></li>
+<li><a href="https://www.dexerto.com/wikis/windrose/resources/steel-nails/" target="_blank" rel="noopener noreferrer">How to get Steel Nails in Windrose — Dexerto</a></li>
+<li><a href="https://finalboss.io/windrose-how-to-repair-your-ship-wharf-repair" target="_blank" rel="noopener noreferrer">How to Repair Your Ship — FinalBoss.io</a></li>
+<li><a href="https://games.gg/windrose/guides/windrose-how-to-get-master-combat-repair-kit/" target="_blank" rel="noopener noreferrer">How to Get Master Combat Repair Kit — GAMES.GG</a></li>
+</ul>
+<p class="sources-note">This source pass did not find a current official item database or strong Reddit/forum corroboration. Ordinary Nails guides were not used as evidence for Steel Nails claims.</p>
+</section>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-logo">🗺 RelicTrek</div>
+<div class="footer-links">
+<a href="/en/">Home</a>
+<a href="/en/games/">Games</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/about">About</a>
+<a href="/en/privacy">Privacy</a>
+</div>
+<div class="footer-copy">© 2026 RelicTrek · Independent game guides for curious explorers</div>
+</div>
+</footer>
+</body>
+</html>
