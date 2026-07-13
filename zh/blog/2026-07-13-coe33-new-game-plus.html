@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《Clair Obscur: Expedition 33》二周目继承机制全解析 — RelicTrek</title>
+<meta name="description" content="二周目到底继承什么、重置什么？为什么好感度会清零？序章里那个千万别卖的道具是什么？一次讲清楚。">
+<link rel="canonical" href="https://relictrek.com/zh/blog/2026-07-13-coe33-new-game-plus.html">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/blog/2026-07-13-coe33-new-game-plus.html">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/blog/2026-07-13-coe33-new-game-plus.html">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/blog/2026-07-13-coe33-new-game-plus.html">
+<meta property="og:title" content="《Clair Obscur: Expedition 33》二周目继承机制全解析 — RelicTrek">
+<meta property="og:description" content="二周目到底继承什么、重置什么？为什么好感度会清零？序章里那个千万别卖的道具是什么？一次讲清楚。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/zh/blog/2026-07-13-coe33-new-game-plus.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:75px;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-meta{font-family:var(--font-ui);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+h1{font-family:var(--font-heading);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:1.5rem;text-shadow:0 0 20px rgba(245,185,69,.2)}
+h2{font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gold);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+h3{font-size:1rem;font-weight:600;color:var(--text);margin:1.25rem 0 .5rem}
+p{margin-bottom:.9rem;color:var(--text-dim);font-size:.93rem;line-height:1.75}
+ul,ol{margin:.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.93rem}
+li{margin-bottom:.35rem}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.note-box p{margin:0;color:var(--text-dim)}
+.tip-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(42,157,143,.07);border-left:3px solid var(--teal)}
+.tip-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.tip-box p{margin:0;color:var(--text-dim)}
+.guide-link{display:inline-block;margin-top:.5rem;padding:.4rem .9rem;border:1px solid var(--border-gold);border-radius:4px;font-family:var(--font-ui);font-size:.8rem;font-weight:500;color:var(--gold);letter-spacing:.04em;transition:background .2s}
+.guide-link:hover{background:var(--gold-glow)}
+.sources-section{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--border)}
+.sources-section h2{font-family:var(--font-heading);font-size:1rem;color:var(--muted);margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase}
+.sources-list{list-style:none;margin:0;padding:0}
+.sources-list li{font-size:.8rem;margin-bottom:.35rem}
+.sources-list a{color:var(--info);word-break:break-all}
+.sources-list a:hover{color:var(--gold)}
+.sources-note{font-size:.75rem;color:var(--muted);margin-top:.75rem}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:2.5rem 2rem 1.5rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--font-heading);font-size:1rem;color:var(--gold)}
+.footer-links{display:flex;gap:1.5rem;font-size:.8rem}
+.footer-links a{color:var(--muted)}.footer-links a:hover{color:var(--gold)}
+.footer-copy{width:100%;text-align:center;font-size:.75rem;color:var(--muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+@media(max-width:768px){nav .nav-links{display:none}nav{padding:0 1rem}main{padding:2rem 1rem 3rem}h1{font-size:1.65rem}.footer-inner{display:block}.footer-links{margin-top:1rem;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<nav>
+<a href="/zh/" class="logo"><span>🗺</span>RelicTrek</a>
+<ul class="nav-links">
+<li><a href="/zh/">首页</a></li>
+<li><a href="/zh/games/">游戏</a></li>
+<li><a href="/zh/blog/" class="active">博客</a></li>
+<li><a href="/zh/about.html">关于</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang-switch">
+<a href="/en/blog/2026-07-13-coe33-new-game-plus.html">EN</a>
+<a href="/zh/blog/2026-07-13-coe33-new-game-plus.html" class="active">中文</a>
+</div>
+</div>
+</nav>
+<main>
+<div class="breadcrumb">
+<a href="/zh/">首页</a> › <a href="/zh/blog/">博客</a> › <span>二周目继承机制</span>
+</div>
+<div class="article-meta">Clair Obscur: Expedition 33 · 2026 年 7 月 13 日</div>
+<h1>《Clair Obscur: Expedition 33》二周目到底继承什么，又清空什么</h1>
+
+<p>通关一次《Clair Obscur: Expedition 33》，你大概只看到了这座「光昼之城」内容的 85%。剩下那部分，全部锁在二周目（New Game Plus）里。但很多玩家对继承规则的理解其实是错的，序章里有一个道具特别容易被当成垫仓底的垃圾卖掉，卖掉之后就再也补不回来了。
+
+</p>
+
+<h2>能继承的东西，比想象中要少</h2>
+<p>等级、技能、完整的图腾（Pictos）和月光石（Lumina）收藏、武器及其已升级的等级、已解锁的服装，这些都会带进二周目，这确实是一个实打实的开局优势——用满级武器打第一章的敌人，体验会完全不一样。</p>
+<p>但很多人搞错的地方在于，以为剩下的东西也会跟着一起继承。事实并不是这样。任务道具（比如 Old Key）、日志和唱片这类收藏品，都不会带过去；更让人意外的是，支线任务进度和角色好感度，也会在二周目开始的那一刻清空归零。</p>
+<div class="note-box"><div class="box-label">纠正一个常见误区</div><p>如果你查到的旧攻略说「好感度会继承」，那是错的。Game8 的二周目攻略和 Fextralife wiki 都确认过：进入二周目后，每个角色的好感度会回到最初的起点，跟开一个全新存档没有区别。</p></div>
+
+<h2>序章的节日代币，千万别卖</h2>
+<p>这是整个二周目机制里最容易被忽略、但价值最高的一点：每个队友都有一把专属的「法棍」武器，只有在二周目才能解锁，而解锁条件是——你在序章拿到的那个角色专属节日代币（Festival Token）必须还留在背包里。如果你已经把开局那几个小时收集的「杂物」清理掉了，现在就该回去翻一下背包确认代币还在，因为一旦你的初周目存档往前推进，这些代币就永远拿不回来了。</p>
+<p>除了法棍武器，二周目还会解锁古斯塔夫（Gustave）灵感来自雷诺阿（Renoir）的专属服装，以及一些初周目掉落表里根本不存在的图腾和武器升级选项。</p>
+
+<h2>难度曲线是真的会变陡</h2>
+<p>继承等级和装备，并不代表二周目会变简单。每一章的敌人和 Boss 都会同步强化，血量、防御、速度全面上调——那些你第一次轻松过的战斗，这次会真正考验你的操作，越到第三章越明显。好消息是，二周目也是更好的强化材料出现的地方，其中的催化剂能让你把每个角色的武器真正推到满级，这在初周目有限的催化剂供给下是做不到的。</p>
+<div class="tip-box"><div class="box-label">开二周目前先做这些</div><p>如果你在乎支线剧情和角色关系线，趁初周目就把想看的内容看完——它们不会带过去，进入二周目之后，这些对话和关系进度都要从头再来一遍。</p></div>
+
+<h2>为什么值得花这个时间</h2>
+<p>《Expedition 33》的二周目，不只是「换皮加强版」的重复流程——它才是真正藏着法棍武器、雷诺阿服装，以及专为「已经了解这个世界」的玩家设计的掉落表的那个版本。唯一的陷阱在于，二周目最好的那部分奖励，其实是由你在开启它之前做的选择决定的。留住你的节日代币，在初周目把能清的内容清完，二周目就不再只是「第二遍」，而是这部作品真正的终章内容。</p>
+
+<a href="/zh/games/coe33/new-game-plus" class="guide-link">→ 查看完整二周目攻略</a>
+
+<section class="sources-section">
+<h2>Sources</h2>
+<ul class="sources-list">
+<li><a href="https://game8.co/games/Clair-Obscur-Expedition-33/archives/515745" target="_blank" rel="noopener noreferrer">Game8 — New Game Plus Guide (Changes and Rewards)</a></li>
+<li><a href="https://expedition33.wiki.fextralife.com/New_Game_Plus" target="_blank" rel="noopener noreferrer">Fextralife Wiki — New Game Plus</a></li>
+<li><a href="https://gamefaqs.gamespot.com/ps5/469495-clair-obscur-expedition-33/faqs/81883/new-game-plus" target="_blank" rel="noopener noreferrer">GameFAQs — New Game+ Walkthrough &amp; Guide</a></li>
+</ul>
+<p class="sources-note">本文内容引用自上述链接。尚未经外部来源确认的说法会标注为 待确认 / unverified。</p>
+</section>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-logo">🗺 RelicTrek</div>
+<div class="footer-links">
+<a href="/zh/">首页</a>
+<a href="/zh/games/">游戏</a>
+<a href="/zh/blog/">博客</a>
+<a href="/zh/about.html">关于</a>
+<a href="/zh/privacy.html">隐私政策</a>
+</div>
+<div class="footer-copy">© 2025 RelicTrek · 面向好奇探索者的独立游戏攻略</div>
+</div>
+</footer>
+</body>
+</html>
