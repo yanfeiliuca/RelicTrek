@@ -41,5 +41,81 @@ small,figcaption,caption{font-size:90%}
 </div>
 <aside class="sidebar"><div class="sidebar-card"><h4>本页导航</h4><ul><li><a href="#what">一、它提供什么</a></li><li><a href="#numbers">二、Patch 4.0数值</a></li><li><a href="#craft">三、如何合成</a></li><li><a href="#verdict">四、值得配吗</a></li></ul></div><div class="sidebar-card"><h4>快捷导航</h4><ul><li><a href="/zh/games/tw3/superior-witcher-potions">全部超级药水 →</a></li><li><a href="/zh/games/tw3/">← 猎魔人3首页</a></li><li><a href="/zh/">← RelicTrek 首页</a></li></ul></div><div class="ad-placeholder">Google AdSense<br>300×250</div></aside></div>
 <footer><div class="footer-grid"><div><h4>RelicTrek 圣物寻踪</h4><p style="color:var(--text-dim)">每一件圣物都有迹可循。我们绘制寻宝之路。</p></div><div><h4>游戏</h4><ul><li><a href="/zh/games/windrose/">Windrose</a></li><li><a href="/zh/games/mhwilds/">Monster Hunter Wilds</a></li><li><a href="/zh/games/tw3/">猎魔人3</a></li><li><a href="/zh/games/coe33/">往日不再·远征队33</a></li><li><a href="/zh/games/bmw/">黑神话·悟空</a></li><li><a href="/zh/games/er/">艾尔登法环</a></li><li><a href="/zh/games/bg3/">博德之门3</a></li><li><a href="/zh/games/lop/">匹诺曹的谎言</a></li></ul></div><div><h4>关于</h4><ul><li><a href="/zh/about">关于我们</a></li><li><a href="/zh/contact">联系方式</a></li><li><a href="/zh/blog/">博客</a></li></ul></div><div><h4>法律</h4><ul><li><a href="/zh/privacy">隐私政策</a></li><li><a href="/zh/terms">服务条款</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 RelicTrek。本站为粉丝站点，与 CD Projekt RED 或任何游戏开发商/发行商无关。</p></div></footer>
+<script>
+(function () {
+  if (window.__relicTrekAnalyticsBound) return;
+  window.__relicTrekAnalyticsBound = true;
+
+  function guideSlug() {
+    return window.location.pathname
+      .replace(/^\/(?:en|zh)\/games\/[^/]+\//, '')
+      .replace(/\/$/, '')
+      .replace(/\.html$/, '');
+  }
+
+  function targetPath(url) {
+    return url.hash || url.pathname.replace(/\.html$/, '') || '/';
+  }
+
+  function send(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a');
+    if (!link) return;
+
+    var rawHref = link.getAttribute('href');
+    if (!rawHref || rawHref.charAt(0) === 'javascript:') return;
+
+    var url;
+    try {
+      url = new URL(rawHref, window.location.href);
+    } catch (error) {
+      return;
+    }
+
+    var slug = guideSlug();
+    var sameOrigin = url.origin === window.location.origin;
+
+    if (link.closest('.lang-switch')) {
+      send('guide_interaction', {
+        interaction_type: 'language_switch',
+        guide_slug: slug,
+        target_path: targetPath(url)
+      });
+      return;
+    }
+
+    if (sameOrigin && url.hash) {
+      send('guide_interaction', {
+        interaction_type: 'toc_click',
+        section_id: url.hash.slice(1),
+        guide_slug: slug,
+        target_path: url.hash
+      });
+      return;
+    }
+
+    if (sameOrigin && link.closest('.sidebar-card')) {
+      send('guide_interaction', {
+        interaction_type: 'related_guide_click',
+        guide_slug: slug,
+        target_path: targetPath(url)
+      });
+      return;
+    }
+
+    if (!sameOrigin && (url.protocol === 'http:' || url.protocol === 'https:')) {
+      send('outbound_click', {
+        link_domain: url.hostname,
+        link_type: link.closest('.sources-section') ? 'source_reference' : 'external_guide',
+        source_name: link.dataset.sourceName || url.hostname,
+        guide_slug: slug
+      });
+    }
+  }, { passive: true });
+}());
+</script>
 </body>
 </html>

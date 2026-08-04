@@ -41,5 +41,81 @@ small,figcaption,caption{font-size:90%}
 </div>
 <aside class="sidebar"><div class="sidebar-card"><h4>On This Page</h4><ul><li><a href="#what">1. What It Does</a></li><li><a href="#numbers">2. Patch 4.0 Numbers</a></li><li><a href="#craft">3. Crafting</a></li><li><a href="#verdict">4. Worth Crafting?</a></li></ul></div><div class="sidebar-card"><h4>Quick Navigation</h4><ul><li><a href="/en/games/tw3/superior-witcher-potions">All Superior Potions →</a></li><li><a href="/en/games/tw3/">← The Witcher 3 home</a></li><li><a href="/en/">← RelicTrek Home</a></li></ul></div><div class="ad-placeholder">Google AdSense<br>300×250</div></aside></div>
 <footer><div class="footer-grid"><div><h4>RelicTrek</h4><p style="color:var(--text-dim)">Every relic has a trail. We map the trek.</p></div><div><h4>Games</h4><ul><li><a href="/en/games/windrose/">Windrose</a></li><li><a href="/en/games/mhwilds/">Monster Hunter Wilds</a></li><li><a href="/en/games/tw3/">The Witcher 3</a></li><li><a href="/en/games/coe33/">Clair Obscur: Expedition 33</a></li><li><a href="/en/games/bmw/">Black Myth: Wukong</a></li><li><a href="/en/games/er/">Elden Ring</a></li><li><a href="/en/games/bg3/">Baldur's Gate 3</a></li><li><a href="/en/games/lop/">Lies of P</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/en/about">About Us</a></li><li><a href="/en/contact">Contact</a></li><li><a href="/en/blog/">Blog</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/en/privacy">Privacy Policy</a></li><li><a href="/en/terms">Terms of Service</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 RelicTrek. This is a fan site and is not affiliated with CD Projekt RED or any game developer or publisher.</p></div></footer>
+<script>
+(function () {
+  if (window.__relicTrekAnalyticsBound) return;
+  window.__relicTrekAnalyticsBound = true;
+
+  function guideSlug() {
+    return window.location.pathname
+      .replace(/^\/(?:en|zh)\/games\/[^/]+\//, '')
+      .replace(/\/$/, '')
+      .replace(/\.html$/, '');
+  }
+
+  function targetPath(url) {
+    return url.hash || url.pathname.replace(/\.html$/, '') || '/';
+  }
+
+  function send(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a');
+    if (!link) return;
+
+    var rawHref = link.getAttribute('href');
+    if (!rawHref || rawHref.charAt(0) === 'javascript:') return;
+
+    var url;
+    try {
+      url = new URL(rawHref, window.location.href);
+    } catch (error) {
+      return;
+    }
+
+    var slug = guideSlug();
+    var sameOrigin = url.origin === window.location.origin;
+
+    if (link.closest('.lang-switch')) {
+      send('guide_interaction', {
+        interaction_type: 'language_switch',
+        guide_slug: slug,
+        target_path: targetPath(url)
+      });
+      return;
+    }
+
+    if (sameOrigin && url.hash) {
+      send('guide_interaction', {
+        interaction_type: 'toc_click',
+        section_id: url.hash.slice(1),
+        guide_slug: slug,
+        target_path: url.hash
+      });
+      return;
+    }
+
+    if (sameOrigin && link.closest('.sidebar-card')) {
+      send('guide_interaction', {
+        interaction_type: 'related_guide_click',
+        guide_slug: slug,
+        target_path: targetPath(url)
+      });
+      return;
+    }
+
+    if (!sameOrigin && (url.protocol === 'http:' || url.protocol === 'https:')) {
+      send('outbound_click', {
+        link_domain: url.hostname,
+        link_type: link.closest('.sources-section') ? 'source_reference' : 'external_guide',
+        source_name: link.dataset.sourceName || url.hostname,
+        guide_slug: slug
+      });
+    }
+  }, { passive: true });
+}());
+</script>
 </body>
 </html>
