@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>博德之门3 Patch 2 重写了卡拉赫的结局 — RelicTrek</title>
+<meta name="description" content="Patch 2 为卡拉赫新增了尾声动画和第一、二幕的额外反思剧情，还加入了一个关于谁陪她回阿佛纳斯的新选择。这里是全部变化。">
+<link rel="canonical" href="https://relictrek.com/zh/blog/2026-09-05-bg3-patch2-karlach-ending-changes">
+<link rel="alternate" hreflang="en" href="https://relictrek.com/en/blog/2026-09-05-bg3-patch2-karlach-ending-changes">
+<link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/blog/2026-09-05-bg3-patch2-karlach-ending-changes">
+<link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/blog/2026-09-05-bg3-patch2-karlach-ending-changes">
+<meta property="og:title" content="博德之门3 Patch 2 重写了卡拉赫的结局 — RelicTrek">
+<meta property="og:description" content="Patch 2 为卡拉赫新增了尾声动画和第一、二幕的额外反思剧情，还加入了一个关于谁陪她回阿佛纳斯的新选择。这里是全部变化。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://relictrek.com/zh/blog/2026-09-05-bg3-patch2-karlach-ending-changes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VH076R049"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VH076R049');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+<style>
+:root{--bg-void:#060708;--bg-deep:#0a0b0e;--bg-card:#0d0f14;--bg-elevated:#12151c;--gold:#f5b945;--gold-lt:#f7c960;--gold-dim:#bd7c08;--gold-glow:rgba(245,185,69,0.1);--teal:#2a9d8f;--red:#e85d04;--text:#e8e4dc;--text-dim:#c5bda8;--muted:#5c5750;--info:#5c8dca;--border:#1c2030;--border-gold:rgba(245,185,69,0.18);--font-heading:'Cinzel',Georgia,serif;--font-ui:'Rajdhani','Inter',sans-serif;--font-body:'Inter',-apple-system,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:75px;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-void);color:var(--text);line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.35}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-dim)}
+nav{position:sticky;top:0;z-index:100;background:rgba(6,7,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem}
+nav .logo{font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav .logo span{font-size:1.1rem;margin-right:.35rem}
+nav .nav-links{display:flex;gap:2rem;margin-left:2.5rem;list-style:none}
+nav .nav-links a{font-family:var(--font-ui);font-size:.85rem;font-weight:500;color:var(--text-dim);letter-spacing:.05em;text-transform:uppercase}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--gold)}
+nav .nav-right{margin-left:auto;display:flex;align-items:center;gap:1rem}
+nav .lang-switch{font-family:var(--font-ui);display:flex;gap:.25rem;font-size:.8rem;font-weight:500}
+nav .lang-switch a{color:var(--muted);padding:.25rem .4rem;border-radius:3px}
+nav .lang-switch a.active{color:var(--gold);background:var(--gold-glow)}
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted)}.breadcrumb span{color:var(--gold)}
+.article-meta{font-family:var(--font-ui);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+h1{font-family:var(--font-heading);font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:1.5rem;text-shadow:0 0 20px rgba(245,185,69,.2)}
+h2{font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gold);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-gold);letter-spacing:.02em}
+h3{font-size:1rem;font-weight:600;color:var(--text);margin:1.25rem 0 .5rem}
+p{margin-bottom:.9rem;color:var(--text-dim);font-size:.93rem;line-height:1.75}
+ul,ol{margin:.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:.93rem}
+li{margin-bottom:.35rem}
+.note-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(245,185,69,.06);border-left:3px solid var(--gold)}
+.note-box .box-label{font-weight:600;color:var(--gold);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.note-box p{margin:0;color:var(--text-dim)}
+.tip-box{padding:1rem 1.25rem;border-radius:8px;margin:1.25rem 0;font-size:.9rem;background:rgba(42,157,143,.07);border-left:3px solid var(--teal)}
+.tip-box .box-label{font-weight:600;color:var(--teal);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.tip-box p{margin:0;color:var(--text-dim)}
+.guide-link{display:inline-block;margin-top:.5rem;padding:.4rem .9rem;border:1px solid var(--border-gold);border-radius:4px;font-family:var(--font-ui);font-size:.8rem;font-weight:500;color:var(--gold);letter-spacing:.04em;transition:background .2s}
+.guide-link:hover{background:var(--gold-glow)}
+.sources-section{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--border)}
+.sources-section h2{font-family:var(--font-heading);font-size:1rem;color:var(--muted);margin-bottom:.75rem;letter-spacing:.04em;text-transform:uppercase}
+.sources-list{list-style:none;margin:0;padding:0}
+.sources-list li{font-size:.8rem;margin-bottom:.35rem}
+.sources-list a{color:var(--info);word-break:break-all}
+.sources-list a:hover{color:var(--gold)}
+.sources-note{font-size:.75rem;color:var(--muted);margin-top:.75rem}
+footer{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:2.5rem 2rem 1.5rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--font-heading);font-size:1rem;color:var(--gold)}
+.footer-links{display:flex;gap:1.5rem;font-size:.8rem}
+.footer-links a{color:var(--muted)}.footer-links a:hover{color:var(--gold)}
+.footer-copy{width:100%;text-align:center;font-size:.75rem;color:var(--muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+@media(max-width:768px){nav .nav-links{display:none}nav{padding:0 1rem}main{padding:2rem 1rem 3rem}h1{font-size:1.65rem}.footer-inner{display:block}.footer-links{margin-top:1rem;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<nav>
+<a href="/zh/" class="logo"><span>🗺</span>RelicTrek</a>
+<ul class="nav-links">
+<li><a href="/zh/">首页</a></li>
+<li><a href="/zh/games/">游戏</a></li>
+<li><a href="/zh/blog/" class="active">博客</a></li>
+<li><a href="/zh/about">关于</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang-switch">
+<a href="/en/blog/2026-09-05-bg3-patch2-karlach-ending-changes" class="">EN</a>
+<a href="/zh/blog/2026-09-05-bg3-patch2-karlach-ending-changes" class="active">中文</a>
+</div>
+</div>
+</nav>
+<main>
+<div class="breadcrumb">
+<a href="/zh/">首页</a> &rsaquo; <a href="/zh/blog/">博客</a> &rsaquo; <span>博德之门3 Patch 2 重写了卡拉赫的结局——这是全部变化</span>
+</div>
+<div class="article-meta">博德之门3 &middot; 2026 年 9 月 5 日</div>
+<h1>博德之门3 Patch 2 重写了卡拉赫的结局——这是全部变化</h1>
+
+<p>卡拉赫的结局自游戏发售以来一直是争议最大的部分之一，Patch 2 终于对此做出了回应。这次更新没有改变她炼狱引擎结局的三个大方向，但改变了每一个结局落地的方式。</p>
+<h2 id="new-scenes">第一、二幕新增的反思剧情</h2>
+<p>Patch 2 在第一、二幕为卡拉赫加入了额外的角色剧情，让她能"更好地反思自己的炼狱引擎，以及她所面对的各种选择"。[来源: charlieintel.com] 这些不是新的任务步骤，而是在你走到结局之前，为这个选择积累分量的对话片段。</p>
+<h2 id="epilogue">全新的尾声场景</h2>
+<p>这次更新最大的变化是卡拉赫新增的尾声场景。PC Gamer 称之为"我一直渴望的朋克式收尾"，认为这个不大的补充终于让她的故事线有了真正的收束，而不是一段仓促的过场。[来源: pcgamer.com] Kotaku 的评价更保守一些，称其为"虽小但有意义的改善"，而非彻底重写。[来源: kotaku.com]</p>
+<h2 id="choice">结局处新增的三选一</h2>
+<p>如果卡拉赫在结局时还在你的队伍中，且阿佛纳斯之刃提出带她回九层地狱，Patch 2 现在会让你决定：是整队一起去，只和卡拉赫两人单独去，还是让他们自己离开。[来源: kotaku.com] 相比发售版本几乎没有玩家决策空间的结局，这是一个实质性的改动。</p>
+<div class="note-box"><div class="box-label">为什么会这样</div><p>拉瑞安正面回应了社区关于删减内容的批评，并明确承诺 Patch 2 会给卡拉赫一个更好的结局。[来源: techradar.com]</p></div>
+<h2 id="takeaway">对新一轮游玩意味着什么</h2>
+<p>机制上的要求没有变——你依然需要达蒙的帮助才能让卡拉赫活过结局。但如果你在 Patch 2 之前就通关了，重新游玩时她的结局体验会明显不同，尤其是当你与她有恋爱关系，或者威尔也在队伍里的时候。</p>
+
+<section class="sources-section"><h2>参考来源</h2><ul class="sources-list"><li><a href="https://www.charlieintel.com/baldurs-gate/baldurs-gate-3-patch-2-update-269800/" target="_blank" rel="noopener noreferrer">Baldur's Gate 3 Patch 2 更新说明 — Charlie INTEL</a></li><li><a href="https://www.pcgamer.com/karlachs-new-epilogue-gives-her-the-punk-rock-conclusion-i-desperately-wanted/" target="_blank" rel="noopener noreferrer">卡拉赫的新尾声 — PC Gamer</a></li><li><a href="https://kotaku.com/baldurs-gate-3-new-karlach-ending-epilogue-avernus-wyll-1850792933" target="_blank" rel="noopener noreferrer">博德之门3全新卡拉赫结局 — Kotaku</a></li><li><a href="https://www.techradar.com/gaming/consoles-pc/baldurs-gate-3-devs-address-cut-content-criticism-promising-more-bug-fixes-and-a-better-ending-for-karlach-in-patch-2" target="_blank" rel="noopener noreferrer">开发者回应删减内容批评 — TechRadar</a></li></ul><p class="sources-note">本页内容参考以上来源。未标注来源的说法均标记为待确认。</p></section>
+<a href="/zh/games/bg3/karlach-engine" class="guide-link">&rarr; 查看卡拉赫引擎完整攻略</a>
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-logo">🗺 RelicTrek</div>
+<div class="footer-links">
+<a href="/zh/">首页</a>
+<a href="/zh/games/">游戏</a>
+<a href="/zh/blog/">博客</a>
+<a href="/zh/about">关于</a>
+<a href="/zh/privacy">隐私政策</a>
+</div>
+<div class="footer-copy">&copy; 2025 RelicTrek &middot; 为好奇的探索者提供的独立游戏攻略</div>
+</div>
+</footer>
+</body>
+</html>
