@@ -1,5 +1,13 @@
 [
   {
+    "slug": "2026-09-13-bg3-karlach-dammon-bug-fixed",
+    "game": "bg3",
+    "item": "bg3-karlach-dammon-bug-fixed",
+    "title": "博德之门3修复了那个曾经悄悄毁掉卡拉赫结局的 bug",
+    "description": "达蒙曾经会在第二幕的战斗中永久死亡，让玩家彻底失去卡拉赫的引擎升级。Patch 2 移除了造成这个问题的那场战斗。这里是具体改动。",
+    "date": "2026-09-13"
+  },
+  {
     "slug": "2026-09-13-tw3-superior-witcher-potions",
     "game": "tw3",
     "item": "superior-witcher-potions",
