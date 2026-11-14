@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>快速旅行铃铛攻略 — 隐藏功能物品路线 | RelicTrek 圣物寻踪</title>
-<meta name="description" content="来源谨慎版 Windrose 快速旅行铃铛攻略：海岸丛林海盗遗迹路线、直接拾取边界，以及不再使用未核验节省时间数字的说明。">
-<meta name="keywords" content="Windrose 快速旅行铃铛, Windrose 传送解锁, Windrose 快速旅行物品, Windrose 海盗遗迹隐藏物品, Windrose 早期功能物品">
+<title>Windrose 快速旅行铃铛攻略 — 走私者藏匿点、配方与传送点规则 | RelicTrek 圣物寻踪</title>
+<meta name="description" content="Windrose 快速旅行铃铛：首个铃铛位于初始走私者藏匿点，配方 10 铜锭 + 3 绳子，快速旅行点规则（海岸、至少 2 个、最多 10 个）。">
+<meta name="keywords" content="Windrose 快速旅行铃铛, Windrose 快速旅行, Windrose 快速旅行点, Windrose 走私者藏匿点, Windrose 铃铛配方">
 <link rel="canonical" href="https://relictrek.com/zh/games/windrose/guides/fast-travel-bell">
 <link rel="alternate" hreflang="zh" href="https://relictrek.com/zh/games/windrose/guides/fast-travel-bell">
 <link rel="alternate" hreflang="en" href="https://relictrek.com/en/games/windrose/guides/fast-travel-bell">
 <link rel="alternate" hreflang="x-default" href="https://relictrek.com/en/games/windrose/guides/fast-travel-bell">
-<meta property="og:title" content="快速旅行铃铛攻略 — RelicTrek 圣物寻踪">
-<meta property="og:description" content="隐藏在海岸丛林海盗遗迹中的功能物品；本页保留拾取边界和待确认说明。">
+<meta property="og:title" content="Windrose 快速旅行铃铛攻略 — RelicTrek 圣物寻踪">
+<meta property="og:description" content="第一个快速旅行铃铛在哪、如何制作更多，以及如何搭建最多 10 个点的海岸传送网络。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://relictrek.com/zh/games/windrose/guides/fast-travel-bell">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,6 +88,7 @@ h4{font-size:1.00em;line-height:1.60}
 h5{font-size:1.00em;line-height:1.60}
 h6{font-size:0.85em;line-height:1.60}
 small,figcaption,caption{font-size:90%}
+.mat-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}.mat-table th,.mat-table td{border:1px solid var(--border);padding:.55rem .7rem;text-align:left;vertical-align:top}.mat-table th{color:var(--gold);background:var(--bg-card)}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -102,64 +103,103 @@ small,figcaption,caption{font-size:90%}
 
 <div class="page-header">
   <div class="breadcrumb"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/games/">游戏</a> &rsaquo; <a href="/zh/games/windrose/">Windrose</a> &rsaquo; <span>快速旅行铃铛</span></div>
-  <div class="article-header"><div class="tags"><span class="tag tag-tool">工具/功能</span><span class="tag tag-early">早期</span><span class="tag tag-uncommon">精良</span><span class="tag tag-hidden">隐藏物品</span></div><h1>快速旅行铃铛 — 隐藏功能物品路线</h1><div class="article-meta"><span>🕐 路线时间待确认</span><span>📦 1个隐藏地点</span><span>🗺️ 海岸丛林</span><span>⚔️ 风险待核验</span><span>📅 更新: 2026-05-31</span></div></div>
-  <div class="quick-stats"><div class="stat-card"><div class="stat-value">🗺️</div><div class="stat-label">功能物品</div></div><div class="stat-card"><div class="stat-value">T1?</div><div class="stat-label">获取阶段待确认</div></div><div class="stat-card"><div class="stat-value">待确认</div><div class="stat-label">获取耗时</div></div><div class="stat-card"><div class="stat-value">待确认</div><div class="stat-label">节省时间</div></div></div>
+  <div class="article-header"><div class="tags"><span class="tag tag-tool">工具/功能</span><span class="tag tag-early">早期</span><span class="tag tag-uncommon">可制作</span><span class="tag tag-hidden">隐藏藏匿点</span></div><h1>快速旅行铃铛 — 走私者藏匿点、配方与快速旅行点</h1><div class="article-meta"><span>📍 初始岛走私者藏匿点</span><span>🔨 工作台（1级）</span><span>🧭 最多10个点</span><span>⚔️ 守卫：溺尸</span><span>📅 更新: 2026-11-14</span></div></div>
+  <div class="quick-stats">
+    <div class="stat-card"><div class="stat-value">10 + 3</div><div class="stat-label">每个铃铛：铜锭 + 绳子</div></div>
+    <div class="stat-card"><div class="stat-value">1 + 20</div><div class="stat-label">每个传送点：铃铛 + 木材</div></div>
+    <div class="stat-card"><div class="stat-value">2</div><div class="stat-label">至少需要的传送点</div></div>
+    <div class="stat-card"><div class="stat-value">10</div><div class="stat-label">同时启用上限</div></div>
+  </div>
 </div>
 
 <div class="main-layout"><div class="main-content">
 
-  <section id="why"><h2>一、为什么你需要它</h2>
-    <p><strong>快速旅行铃铛</strong>是 Windrose 早期游戏中 ROI 最高的物品，也是大多数新玩家完全错过的物品。获得后，它允许你在<strong>地图上任何已发现的篝火和基地之间传送</strong>——无冷却、无资源消耗、瞬间旅行。</p>
-    <ul><li><strong>越早确认越好。</strong>如果该物品在当前版本仍可直接拾取，它会减少重复跑图；但具体等级门槛、节省时间和最短路线仍需要游戏内截图或录像复核。</li>
-    <li><strong>无需制作、无需战斗、无需打 Boss。</strong>这是纯粹的探索发现。没有比基础骷髅更强的敌人守卫。唯一的障碍是知道<em>去哪儿</em>找。</li>
-    <li><strong>支持路线测试。</strong>快速旅行可减少重复跑图，但美洲豹之戒配方与收集路线仍未核验，因此这里不再给出固定节省时间。</li>
-    <li><strong>可错过。</strong>藏有铃铛的海盗遗迹不在主线路径上。如果你只跟随主线任务标记，你将<em>永远不会</em>造访它所在的位置。大多数玩家通关了都不知道它的存在。</li></ul>
-    <p><strong>⚠️ 诚实声明：</strong>我们仍在验证铃铛是<em>合成</em>物品还是直接<em>拾取</em>物品。目前证据指向后者。这意味着从技术上它不完全符合 RelicTrek 的"合成"标准。但它的价值和隐藏性太强，我们将其作为特例收录。确认后将更新本攻略。</p>
-    <p><strong>一句话：</strong>别再跑了。去拿铃铛。游戏中的一切都会变得更容易。</p></section>
+  <section id="why">
+    <h2>一、铃铛到底有什么用</h2>
+    <p><strong>快速旅行铃铛</strong>不是拿在手里摇一下就能传送的道具，而是一个<strong>建造材料</strong>：在建造模式中消耗 1 个铃铛 + 20 木材，在海岸边放置一个<strong>快速旅行点</strong>。之后的传送，是在你建好的这些点之间进行。</p>
+    <ul>
+      <li><strong>至少两个点。</strong>陆地上只有一个点是没用的——必须在不同位置放好至少两个，点对点传送才会开放。</li>
+      <li><strong>最多十个点。</strong>现有攻略一致认为最多同时启用 10 个快速旅行点，所以放在哪里是一道预算题。</li>
+      <li><strong>只能建在海岸。</strong>传送点必须建在海岸线上（靠水边，类似码头的位置），不能建在岛屿中央。</li>
+      <li><strong>第一个之后可以自己做。</strong>拿到配方后，更多铃铛可以在工作台制作，第一个铃铛只是起点，不是一次性的稀有物品。</li>
+    </ul>
+    <div class="bonus-box"><div class="box-label">✅ 更正说明（2026-11-14）</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">本页旧版描述了“海盗遗迹”水下地窖、营火校准、摇铃弹出传送菜单等内容，这些都与现有公开攻略不符，已全部删除。本页现以页面底部列出的来源为准。</p></div>
+  </section>
 
-  <section id="components"><h2>二、如何找到它</h2>
-    <p>快速旅行铃铛藏在<strong>海盗遗迹</strong>中，这是海岸丛林东端一处不起眼的未标记废墟。没有任务标记、没有 NPC 提示、没有地图指示指向这个地点。</p>
-    <div class="material-card"><div class="mat-name">🔔 快速旅行铃铛</div><p style="font-size:.85rem;color:var(--muted)">一枚古老的青铜铃铛，刻有航海符号。在任意篝火处摇响它即可"调谐"——此后你可以从地图任意位置传送到该篝火。</p><div class="mat-meta"><span class="mat-meta-item">📍 海盗遗迹 — 海岸丛林东部</span><span class="mat-meta-item">🔍 藏在遗迹地下室的浸水宝箱中</span><span class="mat-meta-item danger">⚠️ 伸手不见五指的水下通道</span></div></div>
+  <section id="components">
+    <h2>二、第一个铃铛在哪里</h2>
+    <p>第一个铃铛位于初始海滩出生点附近的<strong>走私者藏匿点（Smuggler's Cache）</strong>。它是一个被树叶和木头盖住的地洞——打碎遮盖物，就能看到通往地下的楼梯。</p>
+    <div class="material-card">
+      <div class="mat-name">🔔 快速旅行铃铛</div>
+      <p style="font-size:.85rem;color:var(--muted)">用于建造快速旅行点的材料，放置时消耗。</p>
+      <div class="mat-meta"><span class="mat-meta-item">📍 走私者藏匿点 — 初始海滩附近</span><span class="mat-meta-item">📦 楼梯底部的宝箱</span><span class="mat-meta-item danger">⚠️ 有溺尸（Drowned）把守</span></div>
+    </div>
+    <p>各来源对解锁方式的描述略有不同：有攻略说打开藏匿点宝箱即解锁配方；也有攻略把可制作的铃铛与早期任务<strong>“How My Shore Adventure Began”</strong>以及第一次熔炼出<strong>铜锭</strong>挂钩。另外，初始岛上的小型沉船和海滩宝箱也可能掉落铃铛，有一份 wiki 还列出了“废弃海盗营地”里另一个预置铃铛。实际操作上：尽早清掉藏匿点、尽早熔炼铜锭，铃铛和配方就都到手了。</p>
   </section>
 
   <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #1</div>
 
-  <section id="route"><h2>三、逐步路线（~15分钟）</h2>
+  <section id="route">
+    <h2>三、逐步路线：从第一个铃铛到可用的传送网络</h2>
     <div class="route-timeline">
-      <div class="route-step"><span class="step-num">1</span><strong>起点：</strong>海岸丛林前哨（教程后遇到的第一个篝火）。最低 3 级即可尝试——这条路几乎没有战斗。</div>
-      <div class="route-step"><span class="step-num">2</span>沿海滩向<strong>东</strong>行进。经过第一个海盗营地（不要交战——保持在海滩上，在悬崖下方）。继续向东约 3 分钟，直到海滩收窄为一个岩石小湾。</div>
-      <div class="route-step"><span class="step-num">3</span>在岩石小湾处，寻找一根以 45° 角从沙中突出的<strong>断裂船桅</strong>。这是唯一的视觉地标。在此处转向内陆（北）。</div>
-      <div class="route-step"><span class="step-num">4</span>沿一条狭窄、杂草丛生的小径穿过密林约 1 分钟。你将出现在<strong>海盗遗迹</strong>——一座被丛林吞噬的残破石结构（旧灯塔基座）。入口处有一个骷髅（5 级，80 血量）。</div>
-      <div class="route-step"><span class="step-num">5</span>进入遗迹。内部有一条石阶向下通往<strong>被水淹没的地下室</strong>。水是黑色的——你看不到底。这是故意的。铃铛就在水下。</div>
-      <div class="route-step"><span class="step-num">6</span><strong>⚠️ 黑暗通道：</strong>潜入水中。旧稿写有精确深度和火把材料，但这些细节仍待当前版本截图确认。实际行动前，请以游戏内氧气、照明和地形为准。</div>
-      <div class="route-step"><span class="step-num">7</span>在水下小室的远端石祭坛上找到一个<strong>浸水宝箱</strong>。打开 → 获得 <strong>快速旅行铃铛</strong>。</div>
-      <div class="route-step"><span class="step-num">8</span>游回水面（注意氧气——全程约 45 秒，基础肺活量够用）。离开遗迹。</div>
-      <div class="route-step"><span class="step-num">9</span>💎 <strong>顺手牵羊：</strong>离开前，检查地下室西墙的架子（水上部分）。上面有 <strong>古地图碎片 ×1</strong>——一件揭示地图上一个隐藏地点的收集品。</div>
+      <div class="route-step"><span class="step-num">1</span>在初始海滩出生点附近，找一处盖着<strong>树叶和散木</strong>的地洞，打碎后露出楼梯。</div>
+      <div class="route-step"><span class="step-num">2</span>拿好武器下去——里面有一只<strong>溺尸</strong>。这是前期战斗，不卡装备。</div>
+      <div class="route-step"><span class="step-num">3</span>打开宝箱 → <strong>快速旅行铃铛 ×1</strong>。</div>
+      <div class="route-step"><span class="step-num">4</span>熔炼出第一块<strong>铜锭</strong>（早期主线的一部分），之后即可在<strong>1级工作台</strong>制作铃铛。</div>
+      <div class="route-step"><span class="step-num">5</span>制作第二个铃铛：<strong>10 铜锭 + 3 绳子</strong>。绳子在工作台用植物纤维制作。</div>
+      <div class="route-step"><span class="step-num">6</span>打开建造模式（B）→ <strong>Crafting &amp; Utilities</strong> → Utilities → <strong>快速旅行点</strong>（1 铃铛 + 20 木材），放在主基地的海岸边。</div>
+      <div class="route-step"><span class="step-num">7</span>在下一个常回去的地点海岸放第二个点。两个点都建好后，与其中一个互动，在地图上选另一个即可传送。</div>
     </div>
-    <h3>如何使用铃铛</h3><ol><li>将铃铛装备到工具槽。</li><li>手持铃铛时造访任意篝火或基地并与之互动 → 篝火变为"已调谐"。</li><li>从地图任意位置，摇响铃铛（按工具使用键，默认"T"）→ 出现所有已调谐篝火的菜单。</li><li>选择目的地 → 瞬间传送。</li><li>无冷却。无消耗。无使用次数限制。</li></ol>
+    <h3>从船上传送</h3>
+    <p>驾驶双桅帆船（Ketch）航行时，可以打开地图传送到传送点——前提是<strong>不在战斗中、没有被追击</strong>。至于船上传送需要一个点还是两个点，各来源说法不一；有 wiki 称只有在船舵前发起传送，整艘船和船员才会一起移动。联机时有玩家反馈自己是单独传送过去的，船需要事后召唤，队友在船上时要留意。</p>
   </section>
 
-  <section id="intel"><h2>四、风险与沿途宝物</h2>
-    <h3>⚠️ 风险</h3>
-    <div class="danger-box"><div class="box-label">⚠️ 风险一 — 黑暗通道</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">旧稿将通道黑暗程度、火把水下可用性、单程游泳时间和基础氧气写成定论；这些字段目前缺少当前版本证据。本页只保留“水下路线存在迷路与氧气风险”的保守提示。</p></div>
-    <div class="danger-box"><div class="box-label">⚠️ 风险二 — 骷髅守卫</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">一只 5 级骷髅（80 血量）守卫遗迹入口。很弱，但如果你只有 3-4 级可能造成麻烦。用钝器或风筝——它移动缓慢。除非装备严重不足，不足为惧。</p></div>
-    <div class="danger-box"><div class="box-label">⚠️ 风险三 — 迷路</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">海盗遗迹没有地图标记。断裂船桅是唯一的地标。如果错过了它，你会在东部丛林里无尽徘徊。<strong>地标检查点：</strong>如果看到了大型瀑布，说明你走过头了——向西回退约 200 米。</p></div>
-    <h3>💎 沿途宝物</h3>
-    <div class="bonus-box"><div class="box-label">💎 宝物一 — 古地图碎片（海盗遗迹地下室）</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">地下室西墙架子上（水上部分，潜水前）。这件收集品在地图上揭示一个隐藏地点。共有 12 个碎片——收集全部可揭示一件传说级宝藏的位置。</p></div>
+  <section id="intel">
+    <h2>四、放置规则与免费传送点</h2>
+    <div class="danger-box"><div class="box-label">⚠️ 规则一 — 只能建在海岸</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">多份攻略都写明快速旅行点必须建在海岸线上。下铃铛之前，先在水边找好平地。</p></div>
+    <div class="danger-box"><div class="box-label">⚠️ 规则二 — 同时最多十个</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">上限为同时 10 个。有 wiki 提到拆除传送点会返还材料并空出名额，前期的点可以回收再用——以当前版本为准，待确认。</p></div>
+    <div class="danger-box"><div class="box-label">⚠️ 规则三 — 必须亲手放置</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">传送点要在世界中通过建造模式放置，不能在地图上远程放置。</p></div>
+    <h3>💎 不用自己建的传送点</h3>
+    <div class="bonus-box"><div class="box-label">💎 阵营据点</div><p style="margin:0;font-size:.85rem;color:var(--text-dim)">部分阵营据点——资料点名了托尔图加（Tortuga）和海盗阵营的岛屿——带有营火快速旅行点，首次到访后即可使用。尽早去一趟，别用自己的铃铛重复建造。</p></div>
   </section>
 
   <div class="ad-placeholder" style="margin:2rem 0;">Google AdSense — 文中广告 #2</div>
 
-  <section id="crafting"><h2>五、无需合成</h2>
-    <p>快速旅行铃铛直接从海盗遗迹宝箱获取。无需制作站、无需材料、无需组装。这使它成为 RelicTrek 目录中最容易获取的物品——也是最容易被错过的，因为游戏中没有任何指引指向它。</p>
-    <p><strong>建议：</strong>教程结束后第一时间来拿。15 分钟的绕路在使用后的第一个小时内就回本了。</p>
+  <section id="crafting">
+    <h2>五、配方</h2>
+    <table class="mat-table">
+      <thead><tr><th>物品</th><th>制作处</th><th>消耗</th></tr></thead>
+      <tbody>
+        <tr><td>快速旅行铃铛</td><td>工作台（1级）</td><td>10 铜锭、3 绳子</td></tr>
+        <tr><td>绳子</td><td>工作台</td><td>植物纤维</td></tr>
+        <tr><td>快速旅行点</td><td>建造模式 → Crafting &amp; Utilities</td><td>1 快速旅行铃铛、20 木材（有一处 wiki 写 10，以建造菜单为准）</td></tr>
+        <tr><td>归途药水 Homeward Journey（应急返回）</td><td>2级炼金台</td><td>3 炼金基底、1 朗姆酒瓶、5 羽毛、1 亡灵精华</td></tr>
+      </tbody>
+    </table>
+    <p>归途药水是另一种道具，会把你传送回复活点（床或帐篷）。在第二个快速旅行点建好之前，它是很好的过渡手段。</p>
   </section>
 
-  <section id="builds"><h2>六、提示</h2>
-    <ul><li><strong>第一个去拿这个。</strong>在刷取本攻略系列中的任何其他物品之前，先拿到铃铛。后续所有路线都假设你有传送能力。没有它，所有路线时间增加 50-100%。</li>
-    <li><strong>调谐每一个遇到的篝火。</strong>可调谐的篝火数量没有限制。调谐的越多，传送网络越精细。</li>
-    <li><strong>带一个火把。</strong>水下黑暗通道需要它，而且整个游戏中的洞穴探索也都能用到。在离开起始篝火前制作一个。</li>
-    <li><strong>不要太纠结"合成"标准。</strong>虽然铃铛可能不完全符合 RelicTrek 严格的"多部件组装"定义，但其隐藏性质和巨大的功能性价值使其成为任何追求效率的玩家不可或缺的工具。我们收录它，因为它让<em>所有其他圣物收集</em>变得更快。</li></ul>
+  <section id="builds">
+    <h2>六、提示</h2>
+    <ul>
+      <li><strong>真正的成本是铜。</strong>每个铃铛要 10 块铜锭。每次挖矿顺手存一点，发现值得落脚的地方时，包里就有现成的铃铛。</li>
+      <li><strong>先放主基地。</strong>这是你从任何地方——包括船上——最常回去的点。</li>
+      <li><strong>再放资源循环点。</strong>铜矿、铁矿、地牢入口和常回的任务据点值得占名额，一次性的景点不值得。</li>
+      <li><strong>随身带一套。</strong>包里放一个做好的铃铛和 20 木材，登上新岛就能当场落点。</li>
+      <li><strong>远航前设好复活点</strong>（床或帐篷），并备一瓶归途药水应急。</li>
+    </ul>
+  </section>
+
+  <section id="sources">
+    <h2>来源与待确认字段</h2>
+    <ul>
+      <li><a href="https://method.gg/windrose/how-to-fast-travel-in-windrose-using-the-fast-travel-bell" target="_blank" rel="noopener noreferrer">Method.gg — How to Fast Travel in Windrose Using the Fast Travel Bell（2026-04-13）</a></li>
+      <li><a href="https://www.pcgamer.com/games/survival-crafting/windrose-fast-travel/" target="_blank" rel="noopener noreferrer">PC Gamer — How to fast travel in Windrose（2026-04-14）</a></li>
+      <li><a href="https://mobalytics.gg/gamebase/guides/fast-travel-guide-windrose" target="_blank" rel="noopener noreferrer">Mobalytics — How to Fast Travel in Windrose（2026-04-20 更新）</a></li>
+      <li><a href="https://primagames.com/?p=362819" target="_blank" rel="noopener noreferrer">Prima Games — How to Fast Travel in Windrose</a></li>
+      <li><a href="https://thegameswiki.com/windrose/wiki/fast-travel" target="_blank" rel="noopener noreferrer">The Games Wiki — Windrose Fast Travel</a></li>
+    </ul>
+    <p>仍待确认：配方解锁的确切触发条件（藏匿点宝箱还是首块铜锭）、船上传送需要一个点还是两个点、是否只能从船舵传送、拆除返还，以及交易站附近不可放置的限制。来源发布于 2026 年 4–6 月，后续补丁可能改变数值。</p>
   </section>
 
   <section><h2>开始你的收集之旅</h2><p style="color:var(--text-dim)">有了铃铛之后，目录中的每一件圣物都更容易获取。以下是下一步：</p><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
@@ -172,8 +212,8 @@ small,figcaption,caption{font-size:90%}
 </div>
 
 <aside class="sidebar">
-  <div class="sidebar-card"><h4>本页导航</h4><ul><li><a href="#why">一、为什么你需要它</a></li><li><a href="#components">二、如何找到它</a></li><li><a href="#route">三、逐步路线</a></li><li><a href="#intel">四、风险与宝物</a></li><li><a href="#crafting">五、无需合成</a></li><li><a href="#builds">六、提示</a></li></ul></div>
-  <div class="sidebar-card"><h4>快捷导航</h4><ul><li><a href="/zh/games/windrose/">← Windrose 世界首页</a></li><li><a href="/zh/games/windrose/">← 全部 Windrose 攻略</a></li><li><a href="/zh/">← RelicTrek 首页</a></li></ul></div>
+  <div class="sidebar-card"><h4>本页导航</h4><ul><li><a href="#why">一、铃铛的作用</a></li><li><a href="#components">二、第一个铃铛</a></li><li><a href="#route">三、逐步路线</a></li><li><a href="#intel">四、放置规则</a></li><li><a href="#crafting">五、配方</a></li><li><a href="#builds">六、提示</a></li><li><a href="#sources">来源</a></li></ul></div>
+  <div class="sidebar-card"><h4>快速导航</h4><ul><li><a href="/zh/games/windrose/">← Windrose 世界中心</a></li><li><a href="/zh/games/windrose/">← 全部 Windrose 攻略</a></li><li><a href="/zh/">← RelicTrek 首页</a></li></ul></div>
   <div class="ad-placeholder">Google AdSense<br>300×250</div>
 </aside>
 </div>
